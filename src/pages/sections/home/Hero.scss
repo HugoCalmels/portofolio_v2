@@ -1,0 +1,108 @@
+@import "../../../variables";
+.hero-wrapper{
+  margin-top: 45px;
+
+
+
+  display:flex;
+  flex-direction: row;
+  max-height: 500px;
+
+  height: auto;
+}
+
+.hero-content{
+  flex: 1;
+  display:flex;
+  justify-content: space-between;
+  flex-direction: column; 
+
+  padding: 15px 0px;
+}
+
+.hero-img{
+  flex: 1;
+
+}
+
+.hero-content-title{
+  position: relative;
+
+
+}
+.hero-top{
+
+  display:flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.hero-content-title-stain{
+  position: absolute;
+  z-index: 5;
+  margin: auto;
+  bottom: -10px;
+}
+
+.hero-content-title h1{
+  margin: 0;
+  font-size: 50px;
+  position: relative;
+  z-index: 10;
+  
+}
+.hero-content-text {
+  //margin-top: 15px;
+  max-width: 350px;
+}
+.hero-content-text p{
+margin: 0;
+
+
+  font-size: 18px;
+  font-weight: 600;
+}
+.hero-content-buttons{
+  //margin-top: 60px;
+  display:flex;
+  flex-direction: row;
+
+
+  height: 100%;
+  gap: 15px;
+  margin-top: 45px;
+}
+.hero-btn{
+  border: none;
+  outline: none;
+  background-color: none;
+  font-size: 18px;
+  font-family: "Outfit";
+
+  height: 50px;
+  width: 150px;
+  border-radius: 30px;
+  letter-spacing: .66px;
+  box-shadow: 2px 4px 10px rgb(150 150 150);
+  cursor:pointer;
+  transition: .3s;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration:none;
+  padding-bottom:2px;
+}
+.hero-btn:hover{
+  transform: scale(1.05);
+  transition: .3s;
+}
+.hero-btn.projects{
+  font-weight: 500;
+  color: white;
+  background-color: $black_blue;
+}
+.hero-btn.contact{
+  font-weight: 600;
+  background-color: #fff;
+  color: $black_blue;
+  border: 3px solid $black_blue;
+}

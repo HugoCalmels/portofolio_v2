@@ -1,0 +1,288 @@
+@import "../../variables";
+.project-reader-wrapper{
+  max-width: 1180px;
+  padding-bottom: 30px;
+
+margin: auto;
+}
+.project-reader-container{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.project-reader-intro{
+  position: relative;
+  margin-bottom: 15px;
+}
+.project-reader-intro h2{
+  font-size: 50px;
+  position: relative;
+  z-index: 10;
+  margin:0;
+}
+
+.project-reader-stain{
+  position: absolute;
+  z-index: 3;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+
+  
+}
+.project-reader-stain.very-long{
+  bottom: -5px;
+  
+}
+.project-reader-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110vw;
+  min-height: 100vh;
+}
+
+.project-reader-rectangle{
+  min-width: 110vw;
+
+  overflow: hidden;
+  transform: rotate(-2.5deg);
+
+background-color: $purple_op;
+
+padding-top: 60px;
+padding-bottom: 60px;
+box-shadow: 2px 4px 10px rgb(150, 150, 150);
+}
+.project-reader-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  min-height:100%;
+}
+.project-reader-box{
+  
+  max-width: 1180px;
+  width: auto;
+  margin: auto;
+
+    transform: rotate(2.5deg);
+    display:flex;
+    flex-direction: row;
+    position: relative;
+}
+.project-reader-box a {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.prb-img{
+  flex: 1;
+  display:flex;
+  align-items: center;
+  border: 6px solid $black_blue;
+  border-radius: 6px;
+  position: relative;
+  box-shadow: 2px 4px 10px rgb(150, 150, 150);
+}
+.prb-img img{
+  width: 100%;
+  min-height: 300px;
+  object-fit: cover;
+  cursor:pointer;
+}
+
+.prb-content{
+  flex: 1;
+
+display:flex;
+flex-direction: column;
+justify-content: space-between;
+  padding: 0 15px;
+}
+.prb-description{
+
+}
+.prb-description h6{
+ margin: 0;
+ font-size: 20px;
+ font-weight: 600;
+}
+.prb-description p{
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 5px;
+}
+
+.prb-buttons-container{
+
+  display:flex;
+  flex-direction: row;
+  gap: 15px;
+
+}
+
+.prb-button{
+  border: none;
+  outline: none;
+  background-color: none;
+  font-size: 18px;
+  font-family: "Outfit";
+  height: 50px;
+  width: 150px;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  transition: .3s;
+  cursor:pointer;
+  box-shadow: 2px 4px 10px rgb(150, 150, 150);
+  text-decoration: none;
+
+  color: white;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: .3s;
+  padding-bottom: 2px;
+
+}
+.prb-button:hover{
+  transform: scale(1.05);
+  transition: .3s;
+}
+.prb-button.link{
+  font-weight: 500;
+
+  background-color: #000C2E;
+
+}
+
+.prb-buttons-container a{
+
+  text-decoration: none;
+
+  color: white;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.prb-buttons-container a:last-child{
+  color: $black_blue;
+}
+.prb-button.code{
+  font-weight: 600;
+  background-color: #fff;
+  border: 3px solid #000C2E;
+}
+
+
+#project-reader-more-about-title{
+  font-size: 35px;;
+  margin: 0;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+.project-reader-features-list{
+
+  display:flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.prf-feature{
+
+  display:flex;
+  
+}
+
+.prf-img{
+  flex:1;
+  display:flex;
+  align-items: center;
+}
+.prf-img img{
+  width: 100%;
+
+  border: 6px solid $purple_default;
+  border-radius: 6px;
+  height: 300px;
+  object-fit: fill;
+  cursor:pointer;
+  box-shadow: 2px 4px 10px rgb(150, 150, 150);
+}
+
+
+.prf-text{
+  flex: 1;
+  padding: 0 15px;
+}
+.prf-text p{
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.project-reader-languages{
+
+  margin-top: 30px;
+
+}
+
+.project-reader-languages h6{
+  font-size: 20px;
+  margin: 0;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.project-reader-languages ul{
+  margin: 0;
+padding: 0;
+list-style-type: none;
+}
+.prl-tag{
+  font-size: 16px;
+  font-weight: 400;
+  display:flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.prf-feature-wrapper{
+  display:flex;
+  flex-direction: column;
+}
+.prf-feature-title{
+  font-size: 20px;;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.projet-reader-fixed-btns-container{
+  position: fixed;
+
+  right: 35px;
+  top: 85px;
+  height: 50px;
+  z-index: 300;
+
+  display: flex;
+  gap: 10px;
+}
+.prfb-btn{
+  cursor:pointer;
+  transition: .3s;
+  display:flex;
+  align-items:center;
+}
+.prfb-btn:hover{
+  transition: .3s;
+  transform: scale(1.05);
+}

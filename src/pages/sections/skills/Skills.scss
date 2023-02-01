@@ -1,0 +1,89 @@
+@import "../../../variables";
+.skills-wrapper{
+padding-top: 60px;
+
+min-height: calc(90vh - 100px);
+}
+.skills-formation{
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-formation-content{
+  display:flex;
+  flex-direction: row;
+  
+}
+
+.skills-formation-infos{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  gap: 15px;
+
+  
+}
+.skills-formation-infos p{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.skills-formation-img{
+  flex: 1;
+
+  height: 150px;
+}
+
+.skills-formation-img img{
+  width: auto;
+  height: 100%;
+}
+
+.skills-title{
+  position: relative;
+  margin-bottom: 15px;
+}
+.skills-title h2{
+  position: relative;
+  z-index:10;
+  margin: 0;
+  font-size: 50px;
+
+
+}
+.skills-stain{
+  z-index:3;
+  position: absolute;
+  bottom: 2px;
+
+}
+.skills-infos{
+
+  display:flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.skills-infos p{
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+
+}
+.skills-infos p span{
+  font-weight: 600;
+}
+.skills-formation h4{
+  font-size: 35px;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.skills-intro-text{
+  margin: 0;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
