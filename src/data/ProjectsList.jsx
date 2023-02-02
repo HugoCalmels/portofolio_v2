@@ -134,7 +134,7 @@ export const ProjectsList = [
   {
     title: "Portofolio v1",
     ref: "portofolio-v1",
-    link: "https://www.portofolio-hugo-calmels.com/",
+    link: "https://portofolio-hugo-calmels.netlify.app/",
     code: "https://github.com/HugoCalmels/JS_Portofolio",
     image: portofoliov1,
     shortDescription: "Un portofolio que j'ai jugé trop peu professionel au niveau du design.",
