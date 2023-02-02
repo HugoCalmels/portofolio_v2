@@ -8,17 +8,27 @@
 
 .last-projects-title{
   margin-bottom: 15px;
+  
 }
 
 .last-projects-title h5{
   margin: 0;
   font-size: 35px;
+  
+  @media (max-width:450px){
+
+    font-size: 25px;
+  }
 }
 
 .last-project-cardslist{
   display:flex;
   flex-direction: row;
   gap: 30px;
+
+  @media (max-width:950px){
+    flex-direction: column;
+  }
 }
 .last-project-card{
   background-color:$black_blue;
@@ -31,6 +41,14 @@
   transition: .3s;
   cursor:pointer;
   box-shadow: 2px 4px 10px rgb(150 150 150);
+  max-width: 750px;
+  height: 300px;
+
+  @media (max-width:550px){
+    flex-direction: column;
+    max-height: 100%;
+    gap: 15px;
+  }
 }
 .last-project-card:hover{
   transition: .3s;
@@ -69,11 +87,14 @@
   flex: 1;
   display:flex;
   border-radius: 6px;
+  min-height:275px;
 }
 .last-project-img img{
+
   width: 100%;
   object-fit: cover;
   border-radius: 6px;
+
 }
 .last-project-tags-container{
   display:flex;
@@ -86,6 +107,7 @@
   padding-right: 10px;
 
   list-style-type: none;
+  align-items:center;
 
 }
 .last-project-tag{

@@ -44,12 +44,15 @@ const Projects = (props) => {
               {project.tags.map((tag) => (
                 <li className="project-card-tag">{tag}</li>
               ))}
-                </ul>
+              </ul>
+ 
             </div>
-      
+          
           </div>
         ))}
-        </div>
+                          <div className="project-card-invis-div"></div>  
+            </div>
+         
           </div>
 
       </div>

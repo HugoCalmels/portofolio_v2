@@ -35,6 +35,13 @@
   box-shadow: 2px 4px 10px rgb(150, 150, 150);
   border: 6px solid $purple_default;
   border-radius: 6px;
+object-fit: cover;
+    min-height: 600px;
+
+   @media (max-width:1230px){
+   // height: 100%;
+    //width:100vw;
+              }
 }
 .selected-image-container{
   padding: 15px;

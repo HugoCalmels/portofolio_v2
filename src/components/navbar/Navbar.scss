@@ -22,7 +22,9 @@
   margin: auto;
   display:flex;
   flex-direction: row;
-
+  position: relative;
+  z-index: 50;
+  overflow:hidden;
 }
 .navbar-home-btn{
 
@@ -51,7 +53,9 @@
   display:flex;
   justify-content: flex-end;
   align-items: center;
-
+  @media (max-width: 550px) {
+    display:none;
+  }
 }
 .navbar-menu-list{
   list-style-type: none;
@@ -239,4 +243,60 @@
 
 .nml-link-second-page:hover::before {
   width: 100%;
+}
+
+.nc-burger-btn{
+  position: absolute;
+  right: 0;
+  height: 50px;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor:pointer;
+  z-index: 800;
+  display: none;
+  @media (max-width: 550px) {
+    display:flex;
+  }
+}
+
+.navbar-burger-menu-modal{
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+
+  height: calc(100vh - 50px);
+
+  background-color: $black_blue;
+  top: 50px;
+  transform: translateY(-100vh);
+  transition: .3s;
+  overflow: hidden;
+  padding: 15px 15px;
+}
+.navbar-burger-menu-modal.active{
+  transform: translateY(0px);
+}
+.navbar-burger-menu-modal ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display:flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.nav-burger-link{
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+
+}
+.nav-burger-link:hover{
+  text-decoration: underline;
 }

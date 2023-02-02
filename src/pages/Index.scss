@@ -14,10 +14,13 @@ flex-direction: column;
   right: 35px;
   top: 85px;
   height: 50px;
-  z-index: 300;
+  z-index: 99;
 
   display: flex;
   gap: 10px;
+  @media (max-width:1280px){
+    right: 15px;
+  }
 }
 
 .if-btn{
