@@ -31,7 +31,7 @@ export const ProjectsList = [
   {
     title: "Blog automatisé",
     ref: "blog",
-    link: "https://site-temporaire-blog-de-gaelle.netlify.app/",
+    link: "https://site-temporaire-blog-de-gaelle.netlify.app/gaelle-boucherit",
     code: "https://github.com/HugoCalmels/blog",
     image: blogDessins,
     shortDescription: "Une application pour poster des photos/vidéos qui a pour vocation d'être un site de publication d'oeuvres d'art.",
