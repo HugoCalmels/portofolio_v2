@@ -1,80 +1,74 @@
 @import "../../variables";
-.navbar{
+.navbar {
   position: fixed;
-  top:0;
-  left:0;
-  right:0;
-  height:50px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
   z-index: 300;
   padding-left: 15px;
   padding-right: 15px;
-  display:flex;
+  display: flex;
   align-items: center;
   background-color: $black_blue;
 
   box-shadow: 0px 0px 4px rgb(150 150 150);
 }
 
-.navbar-container{
+.navbar-container {
   height: 50px;
   max-width: 1180px;
   width: 100%;
   margin: auto;
-  display:flex;
+  display: flex;
   flex-direction: row;
   position: relative;
   z-index: 50;
-  overflow:hidden;
+  overflow: hidden;
 }
-.navbar-home-btn{
-
-  display:flex;
+.navbar-home-btn {
+  display: flex;
   width: 100%;
   height: 100%;
   flex-direction: row;
   align-items: center;
   //cursor:pointer;
 }
-.navbar-home-btn:hover{
+.navbar-home-btn:hover {
   //h3{
   //}
 }
-.nhb-logo-container{
-  cursor:pointer;
-  display:flex;
-  align-items:center;
+.nhb-logo-container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
-
-
-.navbar-menu-container{
-
+.navbar-menu-container {
   width: 100%;
-  display:flex;
+  display: flex;
   justify-content: flex-end;
   align-items: center;
   @media (max-width: 550px) {
-    display:none;
+    display: none;
   }
 }
-.navbar-menu-list{
+.navbar-menu-list {
   list-style-type: none;
-  margin:0;
+  margin: 0;
   padding: 0;
   display: flex;
   flex-direction: row;
   gap: 30px;
 }
-.navbar-menu-list li{
+.navbar-menu-list li {
   color: white;
   font-size: 16px;
   font-weight: 300;
   position: relative;
 }
 
-
-
-.nml-link{
+.nml-link {
   color: white;
   font-size: 16px;
   font-weight: 300;
@@ -98,7 +92,7 @@
 }
 //
 
-.nml-link.skills.active{
+.nml-link.skills.active {
   color: white;
   font-size: 16px;
   font-weight: 300;
@@ -114,11 +108,10 @@
   width: 100%;
   height: 2px;
   background-color: white;
-
 }
 
 //
-.nml-link.projects.active{
+.nml-link.projects.active {
   color: white;
   font-size: 16px;
   font-weight: 300;
@@ -134,10 +127,9 @@
   width: 100%;
   height: 2px;
   background-color: white;
-
 }
 //
-.nml-link.contact.active{
+.nml-link.contact.active {
   color: white;
   font-size: 16px;
   font-weight: 300;
@@ -153,15 +145,13 @@
   width: 100%;
   height: 2px;
   background-color: white;
-
 }
 
-
-.nhb-title{
-  cursor:pointer;
-  margin-left:10px;
+.nhb-title {
+  cursor: pointer;
+  margin-left: 10px;
   color: #fff;
-  font-size:18px;
+  font-size: 18px;
   font-weight: 500;
   transition: 0.3s;
   position: relative;
@@ -183,7 +173,6 @@
   width: 100%;
 }
 
-
 .nhb-title.active::before {
   content: "";
   position: absolute;
@@ -195,7 +184,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.nml-link-secondary-github{
+.nml-link-secondary-github {
   color: white;
   font-size: 16px;
   font-weight: 300;
@@ -219,14 +208,13 @@
   width: 100%;
 }
 
-
-.nml-link-second-page{
+.nml-link-second-page {
   color: white;
   font-size: 16px;
   font-weight: 300;
   text-decoration: none;
   position: relative;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .nml-link-second-page::before {
@@ -245,24 +233,24 @@
   width: 100%;
 }
 
-.nc-burger-btn{
+.nc-burger-btn {
   position: absolute;
   right: 0;
   height: 50px;
 
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 
-  cursor:pointer;
+  cursor: pointer;
   z-index: 800;
   display: none;
   @media (max-width: 550px) {
-    display:flex;
+    display: flex;
   }
 }
 
-.navbar-burger-menu-modal{
+.navbar-burger-menu-modal {
   position: fixed;
   z-index: 100;
   left: 0;
@@ -273,30 +261,29 @@
   background-color: $black_blue;
   top: 50px;
   transform: translateY(-100vh);
-  transition: .3s;
+  transition: 0.3s;
   overflow: hidden;
   padding: 15px 15px;
 }
-.navbar-burger-menu-modal.active{
+.navbar-burger-menu-modal.active {
   transform: translateY(0px);
 }
-.navbar-burger-menu-modal ul{
+.navbar-burger-menu-modal ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  display:flex;
+  display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.nav-burger-link{
+.nav-burger-link {
   color: white;
   font-size: 16px;
   font-weight: 300;
   text-decoration: none;
   position: relative;
   cursor: pointer;
-
 }
-.nav-burger-link:hover{
+.nav-burger-link:hover {
   text-decoration: underline;
 }

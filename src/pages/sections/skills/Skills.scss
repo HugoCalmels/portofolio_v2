@@ -1,104 +1,95 @@
 @import "../../../variables";
-.skills-wrapper{
-padding-top: 60px;
+.skills-wrapper {
+  padding-top: 60px;
 
-min-height: calc(90vh - 100px);
-
+  min-height: calc(90vh - 100px);
 }
-.skills-formation{
+.skills-formation {
   display: flex;
   flex-direction: column;
 }
 
-.skills-formation-content{
-  display:flex;
+.skills-formation-content {
+  display: flex;
   flex-direction: row;
-  @media (max-width:650px){
-    flex-direction:column;
+  @media (max-width: 650px) {
+    flex-direction: column;
     gap: 30px;
   }
 }
 
-.skills-formation-infos{
+.skills-formation-infos {
   display: flex;
   flex-direction: column;
   flex: 1;
 
   gap: 15px;
-
-  
 }
-.skills-formation-infos p{
+.skills-formation-infos p {
   margin: 0;
   font-size: 16px;
   font-weight: 600;
 }
-.skills-formation-img{
+.skills-formation-img {
   flex: 1;
 
   height: 150px;
 }
 
-.skills-formation-img img{
+.skills-formation-img img {
   width: auto;
   height: 100%;
   height: 150px;
-  @media (max-width:450px){
+  @media (max-width: 450px) {
     height: 100px;
   }
 }
 
-.skills-title{
+.skills-title {
   position: relative;
   margin-bottom: 15px;
 }
-.skills-title h2{
+.skills-title h2 {
   position: relative;
-  z-index:10;
+  z-index: 10;
   margin: 0;
   font-size: 50px;
-  @media (max-width:875px){
+  @media (max-width: 875px) {
     font-size: 35px;
-
   }
-
 }
-.skills-stain{
-  z-index:3;
+.skills-stain {
+  z-index: 3;
   position: absolute;
   bottom: 2px;
-
 }
-.skills-stain svg{
-  @media (max-width:875px){
+.skills-stain svg {
+  @media (max-width: 875px) {
     width: 70%;
-    height:  70%;
+    height: 70%;
   }
 }
-.skills-infos{
-
-  display:flex;
+.skills-infos {
+  display: flex;
   flex-direction: column;
   gap: 15px;
-
 }
-.skills-infos p{
+.skills-infos p {
   font-size: 16px;
   font-weight: 400;
   margin: 0;
-
 }
-.skills-infos p span{
+.skills-infos p span {
   font-weight: 600;
 }
-.skills-formation h4{
+.skills-formation h4 {
   font-size: 35px;
   margin: 0;
   margin-top: 30px;
   margin-bottom: 15px;
 }
 
-.skills-intro-text{
+.skills-intro-text {
   margin: 0;
   margin-top: 15px;
   font-size: 18px;

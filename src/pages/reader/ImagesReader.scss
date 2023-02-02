@@ -1,8 +1,6 @@
 @import "../../variables";
-.images-reader-wrapper{
+.images-reader-wrapper {
   position: fixed;
-
-
 
   display: none;
   z-index: 45;
@@ -11,76 +9,70 @@
   right: 0;
   top: 50px;
   justify-content: center;
-
 }
 
-.images-reader-wrapper.active{
-  display:flex;
-
+.images-reader-wrapper.active {
+  display: flex;
 }
 
-.images-reader-container{
+.images-reader-container {
   max-width: 1180px;
   width: 100%;
-  
-  margin: auto;
 
+  margin: auto;
 
   position: relative;
   z-index: 50;
   overflow: hidden;
 }
-.selected-image-container img{
+.selected-image-container img {
   width: 100%;
   box-shadow: 2px 4px 10px rgb(150, 150, 150);
   border: 6px solid $purple_default;
   border-radius: 6px;
-object-fit: cover;
-    min-height: 600px;
+  object-fit: cover;
+  min-height: 600px;
 
-   @media (max-width:1230px){
-   // height: 100%;
+  @media (max-width: 1230px) {
+    // height: 100%;
     //width:100vw;
-              }
+  }
 }
-.selected-image-container{
+.selected-image-container {
   padding: 15px;
   position: relative;
   z-index: 50;
   overflow: hidden;
-
 }
 
-.image-reader-close-btn{
+.image-reader-close-btn {
   position: absolute;
   top: 30px;
   right: 30px;
   background-color: white;
   border-radius: 50%;
-  display:flex;
+  display: flex;
   align-items: center;
   padding: 5px;
   border: 2px solid $black_blue;
-  transition: .3s;
-  cursor:pointer;
+  transition: 0.3s;
+  cursor: pointer;
   z-index: 80;
 }
 
-.image-reader-close-btn:hover{
-  transition: .3s;
+.image-reader-close-btn:hover {
+  transition: 0.3s;
   transform: scale(1.1);
 }
 
-.reader-overlay{
-  background-color: rgba(250,250,250, .66);
+.reader-overlay {
+  background-color: rgba(250, 250, 250, 0.66);
   position: absolute;
   z-index: 50;
   top: 0;
   left: 0;
   bottom: 50px;
   right: 0;
-
 }
-.reader-overlay.active{
-
+.reader-overlay.active {
 }

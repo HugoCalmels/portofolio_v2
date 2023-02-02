@@ -1,15 +1,12 @@
-.main-default{
- 
+.main-default {
   max-width: 1180px;
 
-  margin: auto ;
-display:flex;
-flex-direction: column;
-
-
+  margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.index-fixed-btns-container{
+.index-fixed-btns-container {
   position: fixed;
 
   right: 35px;
@@ -19,21 +16,21 @@ flex-direction: column;
 
   display: flex;
   gap: 10px;
-  @media (max-width:1280px){
+  @media (max-width: 1280px) {
     right: 15px;
   }
-  @media (max-width:650px){
+  @media (max-width: 650px) {
     top: 60px;
   }
 }
 
-.if-btn{
-  cursor:pointer;
-  transition: .3s;
-  display:flex;
-  align-items:center;
+.if-btn {
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
 }
-.if-btn:hover{
-  transition: .3s;
+.if-btn:hover {
+  transition: 0.3s;
   transform: scale(1.05);
 }
