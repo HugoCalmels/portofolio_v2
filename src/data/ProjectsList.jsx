@@ -18,7 +18,7 @@ import LearnroomProfile from "../assets/images/LearnroomProfile.png"
 import portofoliov1API from "../assets/images/portofoliov1API.png"
 
 import blogPerf from "../assets/images/blog/blogPerf.png"
-import blogDessins from "../assets/images/blog/blogDessins.png"
+import blogDessins from "../assets/images/blog/blogDessins3.png"
 import blogDessins2 from "../assets/images/blog/blogDessins2.png"
 import blogIndex from "../assets/images/blog/blogIndex.png"
 import blogIndex3 from "../assets/images/blog/blogIndex3.png"
@@ -35,7 +35,7 @@ export const ProjectsList = [
     code: "https://github.com/HugoCalmels/blog",
     image: blogDessins,
     shortDescription: "Une application pour poster des photos/vidéos qui a pour vocation d'être un site de publication d'oeuvres d'art.",
-    longDescription: `Fraîchement réalisé, ceci n'est pas la version finale du site c'est une MVP ( Minimum Viable Product ). C'est une application qui a pour but d'aider le client ( ma mère ) à poster du contenu sur son site, sans n'y connaître rien en développement informatique. Elle est néamoins très exigeante, et moi aussi. Ce site est conforme au RGPD concernant la newsletter, et par conséquent le stockage d'adresses email. `,
+    longDescription: `Fraîchement réalisé, ceci n'est pas la version finale du site c'est une MVP ( Minimum Viable Product ). C'est une application qui a pour but d'aider le client ( ma mère ) à poster du contenu sur son site, sans n'y connaître rien en développement informatique. Il reste quelques fonctionnalités à ajouter, à revoir l'architecture front ( pages & menus ), et aussi à travailler sur le style de manière générale ( polices, couleurs, design ). Mais l'application est déjà pleinement fonctionnelle et vous pouvez aller y jeter un oeil. `,
     tags: ["React.Js", "Rails API", "JavaScript", "JWT-tokens", "PostgreSQL", "AWS"],
     features: [
       {
@@ -77,7 +77,7 @@ export const ProjectsList = [
       {
         title: "3.2 - Newsletter",
         screenshot: blogNewsletter2,
-        description: `Voici à quoi ressemble la base de données actuelle concernant la newsletter. Les addresses email qui recevront chaque newsletter envoyée depuis le site.
+        description: `Voici à quoi ressemble la base de données actuelle concernant la newsletter. Chaque adresse email recevra une newsletter envoyée depuis le site.
         `
       },
       {
@@ -95,7 +95,7 @@ export const ProjectsList = [
     code: "https://github.com/HugoCalmels/react-social-network-redux",
     image: Clonebook,
     shortDescription: "Un clone de Facebook, avec quelques fonctionnalités complexes.",
-    longDescription: "J'ai copié plusieurs fonctionnalité de Facebook, ainsi que son interface. Le but de ce projet était de pratiquer sur React.js en utilisant Redux, et en générant beaucoup de data. Cela m'a aussi permis de recopier et de comprendre un design qui a fait ses preuves.",
+    longDescription: "J'ai copié plusieurs fonctionnalité de Facebook, ainsi que son interface. Le but de ce projet était de pratiquer sur React.js en utilisant Redux, et en générant beaucoup de data. Cela m'a aussi permis de recopier et de comprendre un design qui a fait ses preuves. J'ai aussi pu travailler sur des requêtes plus complexes en terme de base de données relationnelles, telles que les suggestions d'amis.",
     tags: ["React.Js", "Rails API", "JavaScript", "Redux-toolkit", "PostgreSQL", "AWS"],
     features: [
       {
@@ -138,7 +138,7 @@ export const ProjectsList = [
     code: "https://github.com/HugoCalmels/JS_Portofolio",
     image: portofoliov1,
     shortDescription: "Un portofolio que j'ai jugé trop peu professionel au niveau du design.",
-    longDescription: `Réalisé en avril 2022, c'est mon ancien portofolio. Depuis j'ai relevé mon niveau en design, en apportant une touche plus professionnelle. Mon nouveau portofolio est également moins complexe tant au niveau du code que de son architecture. `,
+    longDescription: `Réalisé en avril 2022, c'est mon ancien portofolio. Depuis j'ai relevé mon niveau en design, en apportant une touche plus professionnelle. En plus du design, mon nouveau portofolio est plus simple, plus performant, et plus complet que l'ancien. `,
     tags: ["JavaScript", "Google API"],
     features: [
       {
