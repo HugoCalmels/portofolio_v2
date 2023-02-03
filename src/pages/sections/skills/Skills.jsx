@@ -39,7 +39,7 @@ const Skills = (props) => {
         </p>
         <p>
           <span>Autres compétences</span> : Responsive design, Optimisation de
-          la performance, Référencement naturel ( SEO ), Expérience UI/UX
+          la performance, Référencement naturel ( SEO ), Expérience UI/UX, Méthode Agile
         </p>
         <p>
           <span>Plateform cloud</span> : AWS
