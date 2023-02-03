@@ -70,8 +70,7 @@ const Contact = (props) => {
       </div>
       <div className="contact-text">
         <p>
-          Je cherche actuellement un poste de développeur, dans une ESN (
-          Entreprise de Services du Numérique ) à Toulouse.
+        Mon souhait est de développer mes compétences en tant que développeur dans une ESN à Toulouse.
         </p>
       </div>
 

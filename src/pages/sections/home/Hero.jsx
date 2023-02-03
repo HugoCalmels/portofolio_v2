@@ -15,7 +15,8 @@ const Hero = (props) => {
             <h1>Hugo Calmels, Développeur Web</h1>
           </div>
           <div className="hero-content-text">
-            <p>Expérience en développement pour des projets sur mesure.</p>
+
+            <p>Développeur Front-End/Full-Stack en quête d'un poste ou d'un stage dans l'IT.</p>
           </div>
         </div>
         <div className="hero-content-buttons">
