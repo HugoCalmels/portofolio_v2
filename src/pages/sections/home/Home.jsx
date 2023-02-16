@@ -7,7 +7,7 @@ const Home = (props) => {
     <section className="home-wrapper" id="home" ref={props.homeWrapperElem}>
       <Hero />
 
-      <LastProjects />
+    
     </section>
   );
 };

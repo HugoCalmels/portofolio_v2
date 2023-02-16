@@ -28,66 +28,7 @@ import blogNewsletter2 from "../assets/images/blog/blogNewsletter2.png"
 import blogNewsletter3 from "../assets/images/blog/blogNewsletter3.png"
 
 export const ProjectsList = [
-  {
-    title: "Blog automatisé",
-    ref: "blog",
-    link: "https://site-temporaire-blog-de-gaelle.netlify.app/gaelle-boucherit",
-    code: "https://github.com/HugoCalmels/blog",
-    image: blogDessins,
-    shortDescription: "Une application pour poster des photos/vidéos qui a pour vocation d'être un site de publication d'oeuvres d'art.",
-    longDescription: `Fraîchement réalisé, ceci n'est pas la version finale du site c'est une MVP ( Minimum Viable Product ). C'est une application qui a pour but d'aider le client ( ma mère ) à poster du contenu sur son site, sans n'y connaître rien en développement informatique. Il reste quelques fonctionnalités à ajouter, à revoir l'architecture front ( pages & menus ), et aussi à travailler sur le style de manière générale ( polices, couleurs, design ). Mais l'application est déjà pleinement fonctionnelle et vous pouvez aller y jeter un oeil. `,
-    tags: ["React.Js", "Rails API", "JavaScript", "JWT-tokens", "PostgreSQL", "AWS"],
-    features: [
-      {
-        title: "1.1 - Index du site",
-        screenshot: blogIndex,
-        description: `Voici un apperçu de la page index.
-        `
-      },
-      {
-        title: "1.2 - Index du site en admin",
-        screenshot: blogIndex3,
-        description: `Le principe de cette application, est de rendre un maximum de choses modulables et modifiables.
-        `
-      },
-      {
-        title: "2.1 - Partie administrateur",
-        screenshot: blogLogin,
-        description: `L'admin devra s'authentifier. Chaque requête de changement de contenu du site est protégée par un token généré aléatoirement et regénéré à chaque nouvelle connexion.
-        `
-      },
-      {
-        title: "2.2 - Page dessins en admin",
-        screenshot: blogDessins2,
-        description: `L'admin pourra publier/éditer/supprimer des catégories, et il pourra publier/éditer/supprimer des fichiers images appartenant à ces catégories. Il n'y a aucun changement de page lors des manipulations, ce qui rend l'expérience utilisateur agréable.
-        `
-      },
-      {
-        title: "2.3 - Page performances en admin",
-        screenshot: blogPerf,
-        description: `L'admin pourra publier/éditer/supprimer des catégories, et il pourra publier/éditer/supprimer des fichiers vidéos appartenant à ces catégories, ainsi qu'un lien vers un site existant.
-        `
-      },
-      {
-        title: "3.1 - Newsletter",
-        screenshot: blogNewsletter1,
-        description: `Chaque utilisateur a la possiblité de s'abonner à la newsletter du site. Il a aussi la possibilité de se désabonner avec un lien présent dans chaque mail de newsletter.
-        `
-      },
-      {
-        title: "3.2 - Newsletter",
-        screenshot: blogNewsletter2,
-        description: `Voici à quoi ressemble la base de données actuelle concernant la newsletter. Chaque adresse email recevra une newsletter envoyée depuis le site.
-        `
-      },
-      {
-        title: "3.3 - Newsletter",
-        screenshot: blogNewsletter3,
-        description: `L'admin devra créer son template sur un site tiers, et copier le code HTML du template dans le champ prévu à cet effet. Une prévisualisation est présente pour voir à quoi ressemblera l'email.
-        `
-      },
-    ]
-  },
+  
   {
     title: "Réseau social Front/Back",
     ref: "clonebook",
@@ -131,24 +72,7 @@ export const ProjectsList = [
       },
     ]
   },
-  {
-    title: "Portofolio v1",
-    ref: "portofolio-v1",
-    link: "https://portofolio-hugo-calmels.netlify.app/",
-    code: "https://github.com/HugoCalmels/JS_Portofolio",
-    image: portofoliov1,
-    shortDescription: "Un portofolio que j'ai jugé trop peu professionel au niveau du design.",
-    longDescription: `Réalisé en avril 2022, c'est mon ancien portofolio. Depuis j'ai relevé mon niveau en design, en apportant une touche plus professionnelle. En plus du design, mon nouveau portofolio est plus simple, plus performant, et plus complet que l'ancien. `,
-    tags: ["JavaScript", "Google API"],
-    features: [
-      {
-        title: "Google API",
-        screenshot: portofoliov1API,
-        description: `Capacité à utiliser les API de Google.
-        `
-      },
-    ]
-  },
+  
   {
     title: "Habits Tracker",
     ref: "habits-tracker",
@@ -222,3 +146,88 @@ export const ProjectsList = [
     ]
   },
 ]
+
+// projets retirés de la liste
+
+/*
+{
+    title: "Blog automatisé",
+    ref: "blog",
+    link: "https://site-temporaire-blog-de-gaelle.netlify.app/gaelle-boucherit",
+    code: "https://github.com/HugoCalmels/blog",
+    image: blogDessins,
+    shortDescription: "Une application pour poster des photos/vidéos qui a pour vocation d'être un site de publication d'oeuvres d'art.",
+    longDescription: `Fraîchement réalisé, ceci n'est pas la version finale du site c'est une MVP ( Minimum Viable Product ). C'est une application qui a pour but d'aider le client ( ma mère ) à poster du contenu sur son site, sans n'y connaître rien en développement informatique. Il reste quelques fonctionnalités à ajouter, à revoir l'architecture front ( pages & menus ), et aussi à travailler sur le style de manière générale ( polices, couleurs, design ). Mais l'application est déjà pleinement fonctionnelle et vous pouvez aller y jeter un oeil. `,
+    tags: ["React.Js", "Rails API", "JavaScript", "JWT-tokens", "PostgreSQL", "AWS"],
+    features: [
+      {
+        title: "1.1 - Index du site",
+        screenshot: blogIndex,
+        description: `Voici un apperçu de la page index.
+        `
+      },
+      {
+        title: "1.2 - Index du site en admin",
+        screenshot: blogIndex3,
+        description: `Le principe de cette application, est de rendre un maximum de choses modulables et modifiables.
+        `
+      },
+      {
+        title: "2.1 - Partie administrateur",
+        screenshot: blogLogin,
+        description: `L'admin devra s'authentifier. Chaque requête de changement de contenu du site est protégée par un token généré aléatoirement et regénéré à chaque nouvelle connexion.
+        `
+      },
+      {
+        title: "2.2 - Page dessins en admin",
+        screenshot: blogDessins2,
+        description: `L'admin pourra publier/éditer/supprimer des catégories, et il pourra publier/éditer/supprimer des fichiers images appartenant à ces catégories. Il n'y a aucun changement de page lors des manipulations, ce qui rend l'expérience utilisateur agréable.
+        `
+      },
+      {
+        title: "2.3 - Page performances en admin",
+        screenshot: blogPerf,
+        description: `L'admin pourra publier/éditer/supprimer des catégories, et il pourra publier/éditer/supprimer des fichiers vidéos appartenant à ces catégories, ainsi qu'un lien vers un site existant.
+        `
+      },
+      {
+        title: "3.1 - Newsletter",
+        screenshot: blogNewsletter1,
+        description: `Chaque utilisateur a la possiblité de s'abonner à la newsletter du site. Il a aussi la possibilité de se désabonner avec un lien présent dans chaque mail de newsletter.
+        `
+      },
+      {
+        title: "3.2 - Newsletter",
+        screenshot: blogNewsletter2,
+        description: `Voici à quoi ressemble la base de données actuelle concernant la newsletter. Chaque adresse email recevra une newsletter envoyée depuis le site.
+        `
+      },
+      {
+        title: "3.3 - Newsletter",
+        screenshot: blogNewsletter3,
+        description: `L'admin devra créer son template sur un site tiers, et copier le code HTML du template dans le champ prévu à cet effet. Une prévisualisation est présente pour voir à quoi ressemblera l'email.
+        `
+      },
+    ]
+  },
+
+  {
+    title: "Portofolio v1",
+    ref: "portofolio-v1",
+    link: "https://portofolio-hugo-calmels.netlify.app/",
+    code: "https://github.com/HugoCalmels/JS_Portofolio",
+    image: portofoliov1,
+    shortDescription: "Un portofolio que j'ai jugé trop peu professionel au niveau du design.",
+    longDescription: `Réalisé en avril 2022, c'est mon ancien portofolio. Depuis j'ai relevé mon niveau en design, en apportant une touche plus professionnelle. En plus du design, mon nouveau portofolio est plus simple, plus performant, et plus complet que l'ancien. `,
+    tags: ["JavaScript", "Google API"],
+    features: [
+      {
+        title: "Google API",
+        screenshot: portofoliov1API,
+        description: `Capacité à utiliser les API de Google.
+        `
+      },
+    ]
+  },
+
+*/
