@@ -135,7 +135,7 @@
   letter-spacing: 0.66px;
   box-shadow: 2px 4px 10px rgb(150 150 150);
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.15s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,7 +144,7 @@
 }
 .hero-btn:hover {
   transform: scale(1.05);
-  transition: 0.3s;
+  transition: 0.15s;
 }
 .hero-btn.projects {
   font-weight: 500;

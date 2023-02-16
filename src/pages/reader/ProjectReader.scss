@@ -218,7 +218,7 @@
   width: 150px;
   border-radius: 30px;
   letter-spacing: 1px;
-  transition: 0.3s;
+  transition: 0.15s;
   cursor: pointer;
   box-shadow: 2px 4px 10px rgb(150, 150, 150);
   text-decoration: none;
@@ -229,12 +229,12 @@
   justify-content: center;
   position: relative;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.15s;
   padding-bottom: 2px;
 }
 .prb-button:hover {
   transform: scale(1.05);
-  transition: 0.3s;
+  transition: 0.15s;
 }
 .prb-button.link {
   font-weight: 500;
@@ -251,7 +251,7 @@
   justify-content: center;
   position: relative;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.15s;
 }
 
 .prb-buttons-container a:last-child {
@@ -369,11 +369,11 @@
 }
 .prfb-btn {
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.15s;
   display: flex;
   align-items: center;
 }
 .prfb-btn:hover {
-  transition: 0.3s;
+  transition: 0.15s;
   transform: scale(1.05);
 }

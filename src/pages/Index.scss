@@ -26,11 +26,11 @@
 
 .if-btn {
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.15s;
   display: flex;
   align-items: center;
 }
 .if-btn:hover {
-  transition: 0.3s;
+  transition: 0.15s;
   transform: scale(1.05);
 }

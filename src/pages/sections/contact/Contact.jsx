@@ -102,7 +102,7 @@ const Contact = (props) => {
 
             <div className="contact-form-input">
               <textarea
-                placeholder="Entrez un texte"
+                placeholder="Ce message sera envoyé directement sur ma boite email professionnelle."
                 onChange={(e) => setContent(e.target.value)}
               ></textarea>
             </div>

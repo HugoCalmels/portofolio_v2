@@ -153,7 +153,7 @@
   letter-spacing: 0.66px;
   box-shadow: 2px 4px 10px rgb(150 150 150);
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.15s;
   border: 3px solid $black_blue;
   color: $black_blue;
   font-weight: 600;
@@ -161,7 +161,7 @@
 
 .contact-form-input-send input:hover {
   transform: scale(1.05);
-  transition: 0.3s;
+  transition: 0.15s;
 }
 
 .contact-alert-wrapper {
