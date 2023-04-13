@@ -12,11 +12,11 @@ const Hero = (props) => {
               <BigStain />
             </div>
 
-            <h1>Hugo Calmels, Développeur Web</h1>
+            <h1>Hugo Calmels, Développeur Frontend</h1>
           </div>
           <div className="hero-content-text">
 
-            <p>Développeur Front-End/Full-Stack en quête d'un poste ou d'un stage dans l'IT.</p>
+            <p>Création d'expériences utilisateur intuitives et réactives.</p>
           </div>
         </div>
         <div className="hero-content-buttons">

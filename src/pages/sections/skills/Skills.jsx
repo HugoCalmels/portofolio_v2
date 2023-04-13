@@ -18,8 +18,7 @@ const Skills = (props) => {
 
       <div className="skills-intro-text">
         <p>
-          Je suis capable de concevoir, développer et mettre en ligne des
-          applications personnalisées et uniques.
+        Compétences en développement Frontend pour des interfaces utilisateur réactives et performantes.
         </p>
       </div>
       <div className="skills-infos">
@@ -50,8 +49,8 @@ const Skills = (props) => {
         <h4>Formation</h4>
         <div className="skills-formation-content">
           <div className="skills-formation-infos">
-            <p>Parcours Développeur 24 semaines</p>
-            <p>Session #17 de Mars 2021 à Septembre 2021</p>
+            <p>Développeur Full Stack :</p>
+            <p>mars 2021 - septembre 2021</p>
             <p>Formation certifiante</p>
           </div>
           <div className="skills-formation-img">

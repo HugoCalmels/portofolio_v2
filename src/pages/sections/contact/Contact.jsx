@@ -70,7 +70,7 @@ const Contact = (props) => {
       </div>
       <div className="contact-text">
         <p>
-        Mon souhait est de continuer à développer mes compétences en tant que développeur à Toulouse.
+        Je suis disponible pour échanger sur des opportunités professionnelles enrichissantes dans le domaine du développement web.
         </p>
       </div>
 
@@ -102,7 +102,7 @@ const Contact = (props) => {
 
             <div className="contact-form-input">
               <textarea
-                placeholder="Ce message sera envoyé directement sur ma boite email professionnelle."
+                placeholder="Quel est l'objet de votre demande ?"
                 onChange={(e) => setContent(e.target.value)}
               ></textarea>
             </div>
