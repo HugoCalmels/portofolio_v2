@@ -23,7 +23,7 @@ const Skills = (props) => {
       </div>
       <div className="skills-infos">
         <p>
-          <span>Langages de programmation</span> : HTML, CSS, JavaScript, Ruby
+          <span>Langages de programmation</span> : JavaScript, TypeScript, Ruby, Java, HTML/CSS
         </p>
         <p>
           <span>Frameworks et bibliothèques</span> : React.js, Ruby on Rails,

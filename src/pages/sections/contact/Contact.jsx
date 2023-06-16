@@ -70,7 +70,7 @@ const Contact = (props) => {
       </div>
       <div className="contact-text">
         <p>
-        Je suis disponible pour échanger sur des opportunités professionnelles enrichissantes dans le domaine du développement web.
+        Je suis disponible pour échanger sur des opportunités professionnelles dans le développement web.
         </p>
       </div>
 
