@@ -116,13 +116,13 @@ const Navbar = (props) => {
               </div>
           
           <div className="navbar-buttons-icons">
-            <div className="nbi-logo" href="https://www.linkedin.com/in/hugo-calmels/" target="_blank" rel="noopener noreferrer">
+          <div className="nbi-logo" onClick={() => window.open("https://www.linkedin.com/in/hugo-calmels/", "_blank")} role="button" tabIndex="0" onKeyPress={(e) => e.key === 'Enter' && window.open("https://www.linkedin.com/in/hugo-calmels/", "_blank")}>
               <FaLinkedin className="black-logo"/>
             </div>
-            <div className="nbi-logo" href="https://github.com/HugoCalmels" target="_blank" rel="noopener noreferrer">
+            <div className="nbi-logo" onClick={() => window.open("https://github.com/HugoCalmels", "_blank")} role="button" tabIndex="0" onKeyPress={(e) => e.key === 'Enter' && window.open("https://github.com/HugoCalmels", "_blank")}>
               <FaGithub className="black-logo"/>
             </div>
-            <div className="nbi-logo" href="https://gitlab.com/hugocalmels" target="_blank" rel="noopener noreferrer">
+            <div className="nbi-logo" onClick={() => window.open("https://gitlab.com/hugocalmels", "_blank")} role="button" tabIndex="0" onKeyPress={(e) => e.key === 'Enter' && window.open("https://gitlab.com/hugocalmels", "_blank")}>
               <FaGitlab className="black-logo"/>
             </div>
           </div>
