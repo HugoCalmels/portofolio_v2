@@ -11,7 +11,6 @@ const Index = (props) => {
   const [projectsHeight, setProjectsHeight] = useState(0);
   const [bgWrapperTop, setBgWrapperTop] = useState(0); // State to track the top position of the background wrapper
   const location = useLocation();
-  const projectsRef = useRef(null);
   const homeRef = useRef(null);
   const skillsRef = useRef(null);
 
@@ -33,16 +32,23 @@ const Index = (props) => {
   };
 
   useEffect(() => {
-    // Ensure all elements are rendered before calculating the top
-    const timeoutId = setTimeout(calculateBgWrapperTop, 0);
+    const calculateAfterRender = () => {
+      // Ajoute un délai court (par exemple 100 ms) avant de calculer la position
+      setTimeout(() => {
+        calculateBgWrapperTop(); // Ensure all elements are rendered before calculating the top
+      }, 100);
+    };
 
-    window.addEventListener("resize", calculateBgWrapperTop); // Recalculate on window resize
+    // Calculer la position après le rendu complet
+    calculateAfterRender();
+
+    // Recalculer lors du redimensionnement de la fenêtre
+    window.addEventListener("resize", calculateBgWrapperTop);
 
     return () => {
-      clearTimeout(timeoutId); // Clear timeout to avoid memory leaks
       window.removeEventListener("resize", calculateBgWrapperTop);
     };
-  }, [location.pathname]); // Depend on pathname and ensure recalculation
+  }, [location.pathname]); // Depend on pathname to ensure recalculation
 
   return (
     <div className="main-default">
