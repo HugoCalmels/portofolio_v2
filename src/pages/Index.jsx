@@ -6,15 +6,14 @@ import Contact from "./sections/contact/Contact";
 import img from "../../src/assets/images/backgroundThree.png";
 import { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
-
 const Index = (props) => {
   const [projectsHeight, setProjectsHeight] = useState(0);
-  const [bgWrapperTop, setBgWrapperTop] = useState(0); // State to track the top position of the background wrapper
+  const [bgWrapperTop, setBgWrapperTop] = useState(0);
   const location = useLocation();
   const homeRef = useRef(null);
   const skillsRef = useRef(null);
 
-  const NAVBAR_HEIGHT = 75; // Height of the navbar (fixed value)
+  const NAVBAR_HEIGHT = 75; // Fixed navbar height
 
   // Function to update the height based on the Projects section
   const handleHeightChange = (height) => {
@@ -32,23 +31,32 @@ const Index = (props) => {
   };
 
   useEffect(() => {
-    const calculateAfterRender = () => {
-      // Ajoute un délai court (par exemple 100 ms) avant de calculer la position
-      setTimeout(() => {
-        calculateBgWrapperTop(); // Ensure all elements are rendered before calculating the top
-      }, 100);
+    // Calculer la position après le chargement complet de la page
+    const handleLoad = () => {
+      calculateBgWrapperTop();
     };
 
-    // Calculer la position après le rendu complet
-    calculateAfterRender();
+    // Observer les changements de taille
+    const observer = new ResizeObserver(() => {
+      calculateBgWrapperTop();
+    });
 
-    // Recalculer lors du redimensionnement de la fenêtre
+    if (homeRef.current) observer.observe(homeRef.current);
+    if (skillsRef.current) observer.observe(skillsRef.current);
+
+    // Exécuter le calcul après le chargement complet de la page
+    window.addEventListener("load", handleLoad);
+
+    // Réagir au changement de la taille de la fenêtre
     window.addEventListener("resize", calculateBgWrapperTop);
 
     return () => {
+      window.removeEventListener("load", handleLoad);
       window.removeEventListener("resize", calculateBgWrapperTop);
+      if (homeRef.current) observer.unobserve(homeRef.current);
+      if (skillsRef.current) observer.unobserve(skillsRef.current);
     };
-  }, [location.pathname]); // Depend on pathname to ensure recalculation
+  }, [location.pathname]);
 
   return (
     <div className="main-default">
