@@ -9,6 +9,7 @@ import ProjectReader from "./pages/reader/ProjectReader";
 import Loader from "./Loader";
 import { useEffect } from "react";
 import { SectionContext } from "./context/SectionContext";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   const loaderElem = useRef(null);
@@ -66,31 +67,36 @@ function App() {
   }, []);
 
   const navigateTo = (arg) => {
-    // Vérifie la route actuelle
-    if (location.pathname === "/" && (arg === "skills" || arg === "projects" || arg === "contact")) {
+    // Vérifie si on est sur une page de projet
+    const isOnProjectPage = location.pathname.startsWith("/projets/");
+
+    console.log('TRIGGERED')
+  
+    // Vérifie la route actuelle pour la homepage
+    if (!isOnProjectPage && location.pathname === "/" && (arg === "skills" || arg === "projects" || arg === "contact")) {
       const targetElement = document.querySelector(`#${arg}`);
       console.log(`Navigating to: ${arg}`);
       console.log(`Target Element:`, targetElement);
-
+  
       if (!targetElement) {
         console.error(`Element with ID ${arg} not found.`);
         return;
       }
-
+  
       const navbarHeight = 75;
       const offset = navbarHeight;
-      
+  
       targetElement.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
-
+  
       window.scrollBy(0, -offset);
     } else {
       // Pour d'autres routes ou pages, gérer autrement
       console.log(`Route ${location.pathname} ne nécessite pas de défilement.`);
     }
-
+  
     if (burgerModalElem.current) {
       burgerModalElem.current.classList.remove("active");
     }
@@ -111,6 +117,7 @@ function App() {
           />
 
           <main className="main-content">
+          <ScrollToTop/>
             <Routes>
               <Route
                 path="/"
@@ -122,12 +129,12 @@ function App() {
                     skillsWrapperElem={skillsWrapperElem}
                   />
                 }
-                exact
+            
               />
               <Route
                 path="/projets/:project"
                 element={<ProjectReader />}
-                exact
+          
               />
             </Routes>
           </main>
