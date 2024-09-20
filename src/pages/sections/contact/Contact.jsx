@@ -64,22 +64,15 @@ const Contact = (props) => {
     >
       <div className="contact-title">
         <h2>Contact</h2>
-        <div className="contact-stain">
-          <SmallStain />
-        </div>
-      </div>
-      <div className="contact-text">
-        <p>
-        Je suis disponible pour échanger sur des opportunités professionnelles dans le développement web.
-        </p>
       </div>
 
+      <div className="contact-content-container">
       <div className="contact-content">
         <div className="contact-form">
           <form onSubmit={(e) => handleSubmit(e)}>
             <div className="contact-form-input">
               <label htmlFor="input name">
-                <FiUser style={btnStyle} />
+                <FiUser className="form-label-image" />
               </label>
               <input
                 placeholder="Nom / Prénom"
@@ -90,7 +83,7 @@ const Contact = (props) => {
             </div>
             <div className="contact-form-input">
               <label htmlFor="input mail">
-                <HiOutlineMail style={btnStyle} />
+                <HiOutlineMail className="form-label-image"  />
               </label>
               <input
                 placeholder="Email"
@@ -122,12 +115,10 @@ const Contact = (props) => {
               </div>
             </div>
             <div className="contact-form-input-send">
-              <input type="submit" value="envoyer"></input>
+              <input type="submit" value="Valider"></input>
             </div>
-          </form>
-        </div>
-        <div className="contact-infos">
-          {alertMessage ? (
+            </form>
+            {alertMessage ? (
             <>
               {alertMessage === "Formulaire envoyé !" ? (
                 <div className="contact-alert-wrapper success">
@@ -143,10 +134,13 @@ const Contact = (props) => {
             <></>
           )}
 
+        </div>
+        <div className="contact-infos">
+          
           <h4>Hugo Calmels</h4>
           <div className="contact-line">
             <span>
-              <BsHouse style={btnStyle2} />
+              <BsHouse className="contact-line-image" />
             </span>
             <p>13 rue pégot,</p>
           </div>
@@ -156,24 +150,25 @@ const Contact = (props) => {
           </div>
           <div className="contact-line">
             <span>
-              <BsTelephone style={btnStyle2} />
+              <BsTelephone className="contact-line-image" />
             </span>
             <p>(+33)7.68.10.99.80</p>
           </div>
           <div className="contact-line">
             <span>
-              <HiOutlineMail style={btnStyle2} />
+              <HiOutlineMail className="contact-line-image" />
             </span>
             <p>calmels.hugo@yahoo.fr</p>
           </div>
           <div className="contact-line">
             <span>
-              <RiMapPinLine style={btnStyle2} />
+              <RiMapPinLine className="contact-line-image" />
             </span>
             <p>www.portofolio-hugo-calmels.com</p>
           </div>
         </div>
-      </div>
+        </div>
+        </div>
     </section>
   );
 };

@@ -9,6 +9,14 @@ import ImagesReader from "./ImagesReader";
 import { RxTriangleRight } from "react-icons/rx";
 import { BsArrowLeftCircle } from "react-icons/bs";
 import { BsArrowUpCircle } from "react-icons/bs";
+import { FaReact } from "react-icons/fa";
+import { DiRuby } from "react-icons/di";
+import { SiSpringboot } from "react-icons/si";
+import { FaAngular } from "react-icons/fa";
+import { SiPostgresql } from "react-icons/si";
+import { SiRubyonrails } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+
 const ProjectReader = () => {
   const navigate = useNavigate();
   const btnStyle = { color: "#8D8DDA", width: "30px", height: "30px" };
@@ -45,112 +53,118 @@ const ProjectReader = () => {
     window.scrollTo({ top: "0px", behavior: "smooth" });
   };
 
+  function getIcon(title) {
+    switch (title) {
+      case "React":
+        return <FaReact className="prb-icon-image"/>;
+      case "Ruby":
+        return <DiRuby className="prb-icon-image"/>;
+      case "RubyOnRails":
+        return <SiRubyonrails className="prb-icon-image"/>;
+      case "Postgresql":
+        return <SiPostgresql className="prb-icon-image" />;
+      case "Angular":
+        return <FaAngular className="prb-icon-image" />;
+      case "Java":
+        return <FaJava className="prb-icon-image" />;
+      case "SpringBoot":
+        return <SiSpringboot className="prb-icon-image"/>;
+      default:
+        return null; // Ou une icône par défaut si nécessaire
+    }
+  }
+
+  const handleBackClick = () => {
+    navigate(-1); // Revenir à la page précédente
+  };
+
   return (
+    <>
+    <div className="projects-details-bg-wrapper"></div>
     <section className="project-reader-wrapper">
       <ImagesReader
         selectedImage={selectedImage}
         ImagesReaderRef={ImagesReaderRef}
       />
 
-      <div className="projet-reader-fixed-btns-container">
-        <div
-          className="prfb-btn projects"
-          onClick={() => navigateTo("projects")}
-        >
-          <BsArrowLeftCircle style={btnStyle2} />
-        </div>
-        <div className="prfb-btn">
-          <BsArrowUpCircle style={btnStyle2} onClick={() => scrollToTop()} />
-        </div>
-      </div>
+
+
 
       <div className="project-reader-container">
-        <div className="project-reader-intro">
-          <h2>{foundProject.title}</h2>
-          {foundProject.ref === "clonebook" ? (
-            <div className="project-reader-stain very-long">
-              <VeryLongStain />
-            </div>
-          ) : foundProject.ref === "blog" ? (
-            <div className="project-reader-stain long">
-              <LongStain />
-            </div>
-          ) : (
-            <div className="project-reader-stain">
-              <MediumStain />
-            </div>
-          )}
+        
+          <div className="project-reader-intro">
+
+          <h2>{foundProject.titleDetails}</h2>
+          <div className="project-website-link-container">
+    {foundProject.isDead ? (
+      <button className="project-website-link closed" disabled>
+        Fermé
+      </button>
+    ) : (
+      <a
+        className="project-website-link"
+        href={foundProject.link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Lien
+      </a>
+    )}
+  </div>
         </div>
 
         <div className="project-reader-content">
-          <div className="project-reader-rectangle">
+
             <div className="project-reader-box">
-              <div className="prb-img">
-                <a href={foundProject.link} target="_blank" />
-                <img src={foundProject.image} alt="project image"/>
-              </div>
+            <div className="prf-long-desc">
+        <p dangerouslySetInnerHTML={{ __html: foundProject.longDescription }}></p>
+
+        </div>
               <div className="prb-content">
-                <div className="prb-description">
-                  <h6>Description de l'application :</h6>
-                  <p>{foundProject.longDescription}</p>
+                <div className="prb-techstack">
+
+                <div className="prb-techstacks-container">
+                  {foundProject.tags.map((tag) => (
+                    <div className="prb-techstack-entity">
+                      {getIcon(tag.title)} {/* Utiliser une fonction pour obtenir l'icône appropriée */}
+                      <p>{tag.title}</p>
+                    </div>
+                  ))}
+                  </div>
                 </div>
-                <div className="prb-buttons-container">
-                  <a
-                    className="prb-button link"
-                    href={foundProject.link}
-                    target="_blank"
-                  >
-                    lien
-                  </a>
-                  <a
-                    className="prb-button code"
-                    href={foundProject.code}
-                    target="_blank"
-                  >
-                    code
-                  </a>
-                </div>
+ 
+
               </div>
             </div>
-          </div>
+
         </div>
 
-        <h4 id="project-reader-more-about-title">
-          Plus à propos de ce projet :
-        </h4>
+
+
 
         <div className="project-reader-features-list">
           {foundProject.features.map((feature) => (
             <div className="prf-feature-wrapper">
-              <h5 className="prf-feature-title">{feature.title}</h5>
+
               <div className="prf-feature">
+              <div className="prf-text">
+                  <p>{feature.title}</p>
+                </div>
                 <div
                   className="prf-img"
-                  onClick={() => handleImage(feature.screenshot)}
                 >
                   <img src={feature.screenshot} alt="project screenshot"/>
                 </div>
-                <div className="prf-text">
-                  <p>{feature.description}</p>
-                </div>
+       
               </div>
             </div>
           ))}
         </div>
 
-        <div className="project-reader-languages">
-          <h6>Langages et outils utilisés :</h6>
-          <ul>
-            {foundProject.tags.map((tag) => (
-              <li className="prl-tag">
-                <RxTriangleRight style={btnStyle} />
-                {tag}
-              </li>
-            ))}
-          </ul>
-        </div>
+        
       </div>
-    </section>
+      </section>
+      </>
   );
 };
 

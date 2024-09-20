@@ -4,19 +4,20 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 50px;
+  height: 75px;
   z-index: 300;
   padding-left: 15px;
   padding-right: 15px;
   display: flex;
   align-items: center;
-  background-color: $black_blue;
+  background-color: $new_white2;
 
-  box-shadow: 0px 0px 4px rgb(150 150 150);
+  box-shadow: 0px 0px 1px rgba(32,46,115,.66);
+
 }
 
 .navbar-container {
-  height: 50px;
+  height: 100%;
   max-width: 1180px;
   width: 100%;
   margin: auto;
@@ -32,6 +33,10 @@
   height: 100%;
   flex-direction: row;
   align-items: center;
+  position: absolute;
+  left: 0;
+
+
   //cursor:pointer;
 }
 .navbar-home-btn:hover {
@@ -42,14 +47,22 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+
+
+}
+.nhb-logo-container img{
+  height: 50px;
+  width: auto;
+  object-fit: fill;
 }
 
 .navbar-menu-container {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  @media (max-width: 550px) {
+
+  @media (max-width: 800px) {
     display: none;
   }
 }
@@ -62,18 +75,20 @@
   gap: 30px;
 }
 .navbar-menu-list li {
-  color: white;
-  font-size: 16px;
-  font-weight: 300;
+
   position: relative;
 }
 
 .nml-link {
-  color: white;
-  font-size: 16px;
-  font-weight: 300;
+  color: $new_black;
+  font-size: 1.1rem;
+
   text-decoration: none;
   position: relative;
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #283044;
+  cursor:pointer;
 }
 
 .nml-link::before {
@@ -82,9 +97,10 @@
   bottom: -15px;
   left: 0;
   width: 0;
-  height: 2px;
-  background-color: white;
-  transition: all 0.3s ease-in-out;
+  height: 3px;
+  background-color: $new_blue;
+  opacity: .5;
+  transition: all 0.2s ease-in-out;
 }
 
 .nml-link:hover::before {
@@ -93,9 +109,8 @@
 //
 
 .nml-link.skills.active {
-  color: white;
-  font-size: 16px;
-  font-weight: 300;
+  color: black;
+
   text-decoration: none;
   position: relative;
 }
@@ -106,15 +121,15 @@
   bottom: -15px;
   left: 0;
   width: 100%;
-  height: 2px;
-  background-color: white;
+  height: 3px;
+  background-color: $new_blue;
+  opacity: .5;
 }
 
 //
 .nml-link.projects.active {
-  color: white;
-  font-size: 16px;
-  font-weight: 300;
+  color: black;
+
   text-decoration: none;
   position: relative;
 }
@@ -125,14 +140,14 @@
   bottom: -15px;
   left: 0;
   width: 100%;
-  height: 2px;
-  background-color: white;
+  height:3px;
+  background-color: $new_blue;
+  opacity: .5;
 }
 //
 .nml-link.contact.active {
-  color: white;
-  font-size: 16px;
-  font-weight: 300;
+  color: black;
+
   text-decoration: none;
   position: relative;
 }
@@ -143,18 +158,24 @@
   bottom: -15px;
   left: 0;
   width: 100%;
-  height: 2px;
-  background-color: white;
+  height: 3px;
+  background-color: $new_blue;
+  opacity: .5;
 }
 
 .nhb-title {
   cursor: pointer;
   margin-left: 10px;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
+  color: $new_gray_black;
+  font-size: 1.2rem;
+  font-weight: 700;
   transition: 0.3s;
   position: relative;
+  font-family: "Montserrat";
+  color: #283044;
+  @media (max-width: 800px) {
+    font-size: 1rem;
+  }
 }
 
 .nhb-title::before {
@@ -163,9 +184,10 @@
   bottom: -13px;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 3px;
 
-  background-color: white;
+  background-color: $new_blue;
+  opacity: .5;
   transition: all 0.3s ease-in-out;
 }
 
@@ -179,13 +201,14 @@
   bottom: -13px;
   left: 0;
   width: 100%;
-  height: 2px;
-  background-color: white;
+  height: 3px;
+  background-color: $new_blue;
+  opacity: .5;
   transition: all 0.3s ease-in-out;
 }
 
 .nml-link-secondary-github {
-  color: white;
+  color: black;
   font-size: 16px;
   font-weight: 300;
   text-decoration: none;
@@ -198,9 +221,10 @@
   bottom: -15px;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 3px;
 
-  background-color: white;
+  background-color: $new_blue;
+  opacity: .5;
   transition: all 0.3s ease-in-out;
 }
 
@@ -208,47 +232,31 @@
   width: 100%;
 }
 
-.nml-link-second-page {
-  color: white;
-  font-size: 16px;
-  font-weight: 300;
-  text-decoration: none;
-  position: relative;
-  cursor: pointer;
-}
 
-.nml-link-second-page::before {
-  content: "";
-  position: absolute;
-  bottom: -15px;
-  left: 0;
-  width: 0;
-  height: 2px;
-
-  background-color: white;
-  transition: all 0.3s ease-in-out;
-}
-
-.nml-link-second-page:hover::before {
-  width: 100%;
-}
 
 .nc-burger-btn {
+
   position: absolute;
   right: 0;
-  height: 50px;
+  top: 50%;
+  bottom: 50%;
 
   display: flex;
   justify-content: center;
   align-items: center;
-
+  transition: .2s;
   cursor: pointer;
   z-index: 800;
   display: none;
-  @media (max-width: 550px) {
+  @media (max-width: 800px) {
     display: flex;
   }
 }
+
+.nc-burger-btn:hover {
+  transform: scale(1.075);
+}
+
 
 .navbar-burger-menu-modal {
   position: fixed;
@@ -256,10 +264,10 @@
   left: 0;
   right: 0;
 
-  height: calc(100vh - 50px);
+  bottom: 0;
 
-  background-color: $black_blue;
-  top: 50px;
+  background-color: $new_white2;
+  top: 75px;
   transform: translateY(-100vh);
   transition: 0.3s;
   overflow: hidden;
@@ -270,14 +278,16 @@
 }
 .navbar-burger-menu-modal ul {
   margin: 0;
+  margin-top: 15px;
   padding: 0;
   list-style-type: none;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  align-items :center;
 }
 .nav-burger-link {
-  color: white;
+  color: black;
   font-size: 16px;
   font-weight: 300;
   text-decoration: none;
@@ -286,4 +296,69 @@
 }
 .nav-burger-link:hover {
   text-decoration: underline;
+}
+.navbar-buttons-icons{
+  position: absolute;
+  right: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  @media (max-width: 800px) {
+    display: none;
+  }
+
+}
+.nbi-logo{
+
+  display :flex;
+  align-items :center;
+}
+.nbi-logo img{
+  height: 25px;
+  width: 25px;
+  object-fit: contain;
+}
+
+.black-logo{
+  cursor:pointer;
+  height: 25px;
+  width: 25px;
+  color:$new_blue;
+  opacity: .9;
+}
+.black-logo:hover{
+  transition: 0.1s;
+
+  opacity: 0.66;
+}
+
+
+
+.nml-link-second-page {
+  color: #283044;
+  font-size: 1.1rem!important;
+
+  text-decoration: none;
+  position: relative;
+  font-family: "Montserrat"!important;
+  font-weight: 700!important;
+  cursor: pointer;
+
+}
+
+.nml-link-second-page::before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: $new_blue;
+  opacity: .5;
+  transition: all 0.2s ease-in-out;
+}
+
+.nml-link-second-page:hover::before {
+  width: 100%;
 }

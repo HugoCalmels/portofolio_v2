@@ -5,32 +5,22 @@ import BigStain from "../../../assets/svgs/BigStain";
 const Hero = (props) => {
   return (
     <section className="hero-wrapper">
+      
       <div className="hero-content">
         <div className="hero-top">
           <div className="hero-content-title">
-            <div className="hero-content-title-stain">
-              <BigStain />
-            </div>
-
-            <h1>Hugo Calmels, Développeur Web</h1>
+            <h1>Hugo Calmels</h1>
           </div>
           <div className="hero-content-text">
-
-            <p>Passionné par le développement Frontend et Backend.</p>
+            <p>Développeur d'applications web</p>
           </div>
         </div>
-        <div className="hero-content-buttons">
-          <a href="#projects" className="hero-btn projects">
-            projets
-          </a>
-          <a href="#contact" className="hero-btn contact">
-            contact
-          </a>
+      
+        <div className="hero-content-technos">
+          
         </div>
       </div>
-      <div className="hero-img">
-        <Computer />
-      </div>
+
     </section>
   );
 };

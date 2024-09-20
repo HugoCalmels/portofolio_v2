@@ -10,11 +10,11 @@ import HabitsTrackerCycle from "../assets/images/HabitsTrackerCycle.png"
 import HabitsTrackerCheckpoint from "../assets/images/HabitsTrackerCheckpoint.png"
 import HabitsTrackerStats from "../assets/images/HabitsTrackerStats.png"
 import HabitsTrackerAuth from "../assets/images/HabitsTrackerAuth.png"
-import LearnroomHome from "../assets/images/LearnroomHome.png"
-import LearnroomAuth from "../assets/images/LearnroomAuth.png"
-import LearnroomJoin from "../assets/images/LearnroomJoin.png"
-import LearnroomTeam from "../assets/images/LearnroomTeam.png"
-import LearnroomProfile from "../assets/images/LearnroomProfile.png"
+import vv1 from "../assets/images/LearnroomHome.png"
+import vv2 from "../assets/images/LearnroomAuth.png"
+import vv3 from "../assets/images/LearnroomJoin.png"
+import vv4 from "../assets/images/LearnroomTeam.png"
+import vv5 from "../assets/images/LearnroomProfile.png"
 import portofoliov1API from "../assets/images/portofoliov1API.png"
 
 import blogPerf from "../assets/images/blog/blogPerf.png"
@@ -27,207 +27,415 @@ import blogNewsletter1 from "../assets/images/blog/blogNewsletter1.png"
 import blogNewsletter2 from "../assets/images/blog/blogNewsletter2.png"
 import blogNewsletter3 from "../assets/images/blog/blogNewsletter3.png"
 
+import fa1 from "../assets/images/fa1.png"
+import fa2 from "../assets/images/fa2.png"
+import fa3 from "../assets/images/fa3.png"
+import fa4 from "../assets/images/f4.png"
+import test from "../assets/images/screen-test-1.png"
+
+import fa11 from "../assets/images/app-dota/f11.png"
+import fa12 from "../assets/images/app-dota/f12.png"
+import fa13 from "../assets/images/app-dota/f13.png"
+import fa14 from "../assets/images/app-dota/f14.png"
+import fa15 from "../assets/images/app-dota/f15.png"
+import fa16 from "../assets/images/app-dota/f16.png"
+import fa17 from "../assets/images/app-dota/f17.png"
+import fa18 from "../assets/images/app-dota/f18.png"
+import fa19 from "../assets/images/app-dota/f19.png"
+
+import blog1 from "../assets/images/blog/saved/blogLogin.png"
+import blog2 from "../assets/images/blog/saved/blogDessins2.png"
+import blog3 from "../assets/images/blog/saved/blogDessins3.png"
+import blog4 from "../assets/images/blog/saved/blogIndex3.png"
+import blog5 from "../assets/images/blog/saved/blogNewsletter1.png"
+import blog6 from "../assets/images/blog/saved/blogPerf.png"
+
+import ha1 from "../assets/images/HabitsTrackerCheckpoint.png"
+import ha2 from "../assets/images/HabitsTrackerStats.png"
+import ha3 from "../assets/images/HabitsTrackerAuth.png"
+import ha4 from "../assets/images/HabitsTrackerCycle.png"
+import ha5 from "../assets/images/HabitsTrackerHome.png"
+
+import { FaJava } from "react-icons/fa";
+import { SiSpringboot } from "react-icons/si";
+import { SiPostgresql } from "react-icons/si";
+import { FaAngular } from "react-icons/fa";
+
 export const ProjectsList = [
-  
   {
-    title: "Réseau social Front/Back",
+    title: "Frogged Arena",
+    titleDetails: "Frogged Arena",
+    ref: "froggedarena",
+    isDead: false,
+    link: "https://app.dota-arena.fr/home",
+    code: "private",
+    image: fa1,
+    shortDescription: "Un outil autour de l'univers du jeu-vidéo Steam 'DotA2' : <br>- Connexion rapide via son compte Steam <br>- Envoi et persistance de data texte et images <br>-  Récupération de data Steam du joueur via différentes API <br>- Système de création d'équipes <br>- Système de planification de matches sous format UTC <br>- Système de création de lobbies instantannés <br>- Sécurisé par jwt-token,cookie http-only, et refresh token <br>- Utilisation de SSE et Websockets <br> Technologies : Java/Angular",
+    longDescription: "Projet réalisé en duo avec mon mentor, autour de l'univers du jeu vidéo DotA 2. Ce projet m'a permis de relever plusieurs défis techniques que j'ai su surmonter malgré le fait que je débutais en Java et Angular. <br>- Mise en place d'un système sécurisé avec Spring Security, JWT-tokens, refresh tokens, et cookies HTTP-only.<br>- Intégration des SSE (Server-Sent Events) et des Websockets pour une communication en temps réel.<br>- Authentification rapide via OpenID Steam, permettant de récupérer les données de joueur (ID DotA, MMR, avatar) à partir des API Stratz et Steam. <br>- Gestion des fuseaux horaires en UTC pour planifier des matchs internationaux. <br>- Amélioration de l'interface utilisateur pour une expérience fluide et intuitive. <br> Une partie du projet incluait la création automatique de lobbies via des bots. Après avoir exploré plusieurs solutions (Python, Golang), nous avons opté pour une création manuelle des lobbies, afin de garantir la fiabilité du système et une meilleure expérience utilisateur.",
+    tags: [
+      {
+        title: "Java",
+        icon: "<FaJava />"
+      },
+      {
+        title: "SpringBoot",
+        icon: "<SiSpringboot />"
+      },
+      {
+        title: "Angular",
+        icon: "<FaAngular />"
+      },
+      {
+        title: "Postgresql",
+        icon: "<SiPostgresql />"
+      },
+    ],
+    features: [
+      {
+        title: "Homepage",
+        screenshot: fa1,
+        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
+        Il est également posssible changer son mot de passe.
+        `
+      },
+      {
+        title: "Connexion rapide",
+        screenshot: fa11,
+        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
+        Il est également posssible changer son mot de passe.
+        `
+      },
+      {
+        title: "Teampage",
+        screenshot: fa12,
+        description: `Vous recevrez automatiquement x3 invitations de la part de faux utilisateurs, que vous pourrez accepter ou décliner.
+        `
+      },
+      {
+        title: "TeamDetails",
+        screenshot: fa13,
+        description: `Voilà à quoi ressemble le profil rempli, d'un utilisateur.
+        `
+      },
+      {
+        title: "Scrimspage",
+        screenshot: fa14,
+        description: `Chaque utilisateur a la possibilité de créer du contenu texte, et y ajouter une image.
+        `
+      },
+      {
+        title: "ScrimsDetails",
+        screenshot: fa15,
+        description: `Chaque utilisateur a la possibilité de créer du contenu texte, et y ajouter une image.
+        `
+      },
+      {
+        title: "ScrimsHistory",
+        screenshot: fa16,
+        description: `Chaque utilisateur a la possibilité de créer du contenu texte, et y ajouter une image.
+        `
+      },
+      {
+        title: "ScrimsForm",
+        screenshot: fa17,
+        description: `Chaque utilisateur a la possibilité de créer du contenu texte, et y ajouter une image.
+        `
+      },
+      {
+        title: "Lobbypage",
+        screenshot: fa18,
+        description: `Chaque utilisateur a la possibilité de créer du contenu texte, et y ajouter une image.
+        `
+      },
+      {
+        title: "LobbyDetails",
+        screenshot: fa19,
+        description: `Chaque utilisateur a la possibilité de créer du contenu texte, et y ajouter une image.
+        `
+      },
+    ]
+  },
+  {
+    title: "Clonebook",
+    titleDetails: "Clonebook",
     ref: "clonebook",
+    isDead: false,
     link: "https://clonebook-super.netlify.app/",
     code: "https://github.com/HugoCalmels/react-social-network-redux",
     image: Clonebook,
-    shortDescription: "Un clone de Facebook, avec quelques fonctionnalités complexes.",
-    longDescription: "J'ai copié plusieurs fonctionnalité de Facebook, ainsi que son interface. Le but de ce projet était de pratiquer sur React.js en utilisant Redux, et en générant beaucoup de data. Cela m'a aussi permis de recopier et de comprendre un design qui a fait ses preuves. J'ai aussi pu travailler sur des requêtes plus complexes en terme de base de données relationnelles, telles que les suggestions d'amis.",
-    tags: ["React.Js", "Rails API", "JavaScript", "Redux-toolkit", "PostgreSQL", "AWS"],
+    shortDescription: "Un clone de Facebook incluant diverses fonctionnalités telles : <br>- Connexion/Deconnexion <br>- Récupération de mot de passe via email <br>- Envoi et persistance de data texte et images <br>- Ajout/suppression d'amis <br>- Suggestions d'amis en fonction du nombre d'amis <br>- Sécurisé par jwt-token <br> Technologies : Ruby/React" ,
+    longDescription: "Ce projet a été réalisé dans le cadre d'une volonté d'approfondir mes compétences en React et Ruby on Rails. Mon objectif était de recréer l'interface et les fonctionnalités principales de Facebook afin de démontrer ma maîtrise des technologies front-end et back-end. Ce projet m'a permis de travailler sur des fonctionnalités complexes et de manipuler des données à grande échelle. <br> - Reproduction fidèle de l'interface de Facebook, au pixel près. <br> - Intégration des principales fonctionnalités utilisateur : fil d'actualité, publication de contenu, système de commentaires et de likes. <br> - Utilisation de Redux pour gérer des quantités importantes de données et améliorer les performances de l'application. <br> - Optimisation des requêtes et résolution de problématiques complexes en backend, notamment en matière de complexité algorithmique.",
+    tags: [
+      {
+        title: "React",
+        icon: "<FaReact />"
+      },
+      {
+        title: "Ruby",
+        icon: "<diDiRuby />"
+      },
+      {
+        title: "RubyOnRails",
+        icon: "<SiRubyonrails />"
+      },
+      {
+        title: "Postgresql",
+        icon: "<SiPostgresql />"
+      },
+    ],
     features: [
       {
-        title: "1 - Inscription",
+        title: "Connexion",
+        screenshot: Clonebook,
+        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
+        Il est également posssible changer son mot de passe.
+        `
+      },
+      {
+        title: "Inscription",
         screenshot: register,
         description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
         Il est également posssible changer son mot de passe.
         `
       },
       {
-        title: "2 - Première connexion",
+        title: "Homepage",
         screenshot: firstConnection,
         description: `Vous recevrez automatiquement x3 invitations de la part de faux utilisateurs, que vous pourrez accepter ou décliner.
         `
       },
       {
-        title: "3 - Profil utilisateur",
+        title: "Profil d'un utilisateur",
         screenshot: userProfile,
         description: `Voilà à quoi ressemble le profil rempli, d'un utilisateur.
         `
       },
       {
-        title: "4 - Créer du contenu",
+        title: "Formulaire",
         screenshot: createPost,
         description: `Chaque utilisateur a la possibilité de créer du contenu texte, et y ajouter une image.
         `
       },
       {
-        title: "5 - Suggestions",
+        title: "Suggestions d'amis",
         screenshot: suggestions,
         description: `Vous pourrez aussi avoir accès à une liste de suggestions en fonction du nombres d'amis en communs.
         `
       },
     ]
   },
-  
   {
-    title: "Habits Tracker",
-    ref: "habits-tracker",
-    link: "https://habits-tracker-plus.herokuapp.com/",
-    code: "https://github.com/HugoCalmels/Rails_Project_Habits_Tracker",
-    image: HabitsTrackerHome,
-    shortDescription: "Une application pour créer des habitudes qui sont cochables et seront scannées et enregistrées selon une liste de cycles ( jour / semaine / mois ).",
-    longDescription: `Ce projet a été mon premier challenge individuel. C'est une application qui permet de créer des "habitudes" avec un cycle choisi et un nombre de checkpoints. Chaque "habitude" sous un cycle ( quotidien, hebdomadaire, mensuel) est réinitialisée selon ce même cycle. Donc par exemple pour une "habitude" hebdomadaire, elle sera réinitialisée tous les jours. Aussi à chaque réinitialisation les résultats sont sauvegardés et affichés sous forme de calendrier. `,
-    tags: ["Ruby on Rails", "AJAX", "Heroku scheduler", "JWT-tokens", "PostgreSQL"],
+    title: "Blog Automatisé (fermé)",
+    titleDetails: "Blog Automatisé",
+    ref: "blog",
+    isDead: true,
+    link: "https://clonebook-super.netlify.app/",
+    code: "https://github.com/HugoCalmels/react-social-network-redux",
+    image: blog5,
+    shortDescription: "Blog entièrement automatisé avec fonctionnalités : <br>- Gestion complète du contenu (images, textes, vidéos) <br>- Newsletter automatisée avec envoi d'e-mails via un champ texte <br>- Système d'abonnement et gestion des utilisateurs <br>- Création et édition de sections du site (œuvres, événements, etc.) <br>- Interface admin sécurisée pour la gestion des utilisateurs et des données <br> - Sécurité par jwt-token <br>  Technologies : Ruby/React" ,
+    longDescription: "Ce projet avait pour but de créer un blog totalement automatisé pour un artiste, permettant la gestion complète de contenu varié (images, textes, vidéos) sans intervention technique. Le site était structuré autour de nombreuses pages, sections, et sous-sections pour organiser une vaste collection d'œuvres d'art (1000 à 2000 dessins), performances, et événements. L'objectif principal était de permettre à l'utilisateur (l'artiste) de gérer et de mettre à jour le contenu de manière autonome, incluant la gestion de newsletters, utilisateurs, et abonnements. <br> - Gestion automatisée des œuvres d'art (images, textes, vidéos) par année et type, avec tri dynamique. <br> - Système de gestion de contenu (CMS) pour éditer la homepage et la plupart des pages du site via une interface administrateur intuitive. <br> - Newsletter automatisée : envoi d'e-mails à tous les abonnés via un simple champ texte. <br> - Système d'abonnement et gestion des utilisateurs avec des fonctionnalités comme l'inscription, connexion, et gestion des préférences. <br> - Formulaires de création et d'édition pour gérer différentes sections du site (œuvres, événements, etc.). <br> - Sécurisation et gestion des utilisateurs avec une interface admin dédiée permettant la modification de données sans intervention manuelle. <br>",
+    tags: [
+      {
+        title: "React",
+        icon: "<FaReact />"
+      },
+      {
+        title: "Ruby",
+        icon: "<diDiRuby />"
+      },
+      {
+        title: "RubyOnRails",
+        icon: "<SiRubyonrails />"
+      },
+      {
+        title: "Postgresql",
+        icon: "<SiPostgresql />"
+      },
+    ],
     features: [
       {
-        title: "1 - Inscription",
-        screenshot: HabitsTrackerAuth,
-        description: `Pour profiter pleinement de l'application, l'utilisateur devra créer un compte.
+        title: "Newsletter",
+        screenshot: blog5,
+        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
+        Il est également posssible changer son mot de passe.
         `
       },
       {
-        title: "2 - Choix du cycle",
-        screenshot: HabitsTrackerCycle,
-        description: `Chaque habitude sera sauvegardée sous un cycle.
+        title: "Connexion",
+        screenshot: blog1,
+        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
+        Il est également posssible changer son mot de passe.
         `
       },
       {
-        title: "3 - Vue du panel utilisateur",
-        screenshot: HabitsTrackerCheckpoint,
-        description: `Voici à quoi ressemble le panel utilisateur, et le systeme de cochage.
+        title: "Galerie dessins",
+        screenshot: blog3,
+        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
+        Il est également posssible changer son mot de passe.
         `
       },
       {
-        title: "4 - Vue des statistiques d'un cycle",
-        screenshot: HabitsTrackerStats,
-        description: `Exemple de statistiques d'un cycle quotidien.
+        title: "Admin dessins",
+        screenshot: blog2,
+        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
+        Il est également posssible changer son mot de passe.
         `
       },
+      {
+        title: "Admin homepage",
+        screenshot: blog4,
+        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
+        Il est également posssible changer son mot de passe.
+        `
+      },
+      {
+        title: "Admin performances",
+        screenshot: blog6,
+        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
+        Il est également posssible changer son mot de passe.
+        `
+      },
+
+      
+      
+
+    ]
+  },
+
+  {
+    title: "Habits Tracker (fermé)",
+    titleDetails: "Habits Tracker",
+    ref: "habits-tracker",
+    isDead: true,
+    link: "https://clonebook-super.netlify.app/",
+    code: "https://github.com/HugoCalmels/react-social-network-redux",
+    image: ha1,
+    shortDescription: "Application de suivi des habitudes avec fonctionnalités : <br>- Connexion et persistance des données <br>- Création d'habitudes personnalisées (quotidien, hebdomadaire, mensuel) <br>- Visualisation en temps réel avec barres de progression colorées <br>- Statistiques détaillées avec tableau de bord <br> Technologies : Ruby on Rails",
+    longDescription: "Habits Tracker était mon premier projet solo d'envergure après avoir terminé un bootcamp de développement. L'idée était de créer une application qui permet aux utilisateurs de suivre et d'analyser leurs habitudes au fil du temps, selon des cycles personnalisés (quotidien, hebdomadaire, mensuel). Ce projet m'a permis d'expérimenter à la fois du côté front-end et back-end, bien que j'aie rencontré de nombreux défis techniques en raison de mon manque d'expérience à l'époque. Bien que l'application ait fonctionné et ait été utilisée un temps par moi-même, elle souffrait de bugs, d'une interface peu intuitive et d'une complexité excessive dans la gestion des données. Je travaille actuellement à une version 2, en repartant de zéro. <br> - Création d'habitudes personnalisées avec des cycles quotidiens, hebdomadaires et mensuels, chacun avec un nombre de checkpoints défini par l'utilisateur. <br> - Visualisation des habitudes en temps réel avec des barres de progression colorées pour représenter l'évolution de chaque habitude (vert, orange, jaune, rouge). <br> - Statistiques détaillées avec un tableau de bord inspiré de l'interface calendrier de GitHub, affichant les habitudes réalisées selon des intervalles de temps définis. <br> - Gestion de données front-end et back-end pour organiser et afficher les habitudes en fonction de cycles.",
+    tags: [
+      {
+        title: "Ruby",
+        icon: "<diDiRuby />"
+      },
+      {
+        title: "RubyOnRails",
+        icon: "<SiRubyonrails />"
+      },
+      {
+        title: "Postgresql",
+        icon: "<SiPostgresql />"
+      },
+    ],
+    features: [
+      {
+        title: "Habits panel",
+        screenshot: ha1,
+        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
+        Il est également posssible changer son mot de passe.
+        `
+      },
+      {
+        title: "Habits stats",
+        screenshot: ha2,
+        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
+        Il est également posssible changer son mot de passe.
+        `
+      },
+      {
+        title: "Connexion",
+        screenshot: ha3,
+        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
+        Il est également posssible changer son mot de passe.
+        `
+      },
+      {
+        title: "Habits cycles",
+        screenshot: ha4,
+        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
+        Il est également posssible changer son mot de passe.
+        `
+      },
+      {
+        title: "Homepage",
+        screenshot: ha5,
+        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
+        Il est également posssible changer son mot de passe.
+        `
+      },
+
+    
+      
+
     ]
   },
   {
-    title: "Learnroom",
+    title: "Learnroom (fermé)",
+    titleDetails: "Learnroom",
     ref: "learnroom",
-    link: "https://learnroom-v2.netlify.app/",
-    code: "https://github.com/HugoCalmels/front-learn-room",
-    image: LearnroomHome,
-    shortDescription: `Une application pour créer et rejoindre des sessions. Elle a pour but de rassembler les utilisateurs afin qu'ils étudient ensemble sur les mêmes fuseaux horaires.`,
-    longDescription: `Mon dernier projet de groupe, lors du bootcamp "The Hacking Project", réalisé avec trois autres camarades. J'ai participé à la mise en place de l'API incluant l'authentication, la récupération de mot passe, et les emails envoyés. Sur l'interface ( le Front ), j'étais en charge de la page profil, mais j'ai participé sur toutes les pages. C'est une application pour rejoindre des sessions affiliées, à ce que l'on appelle des "MOOC" ( un MOOC est un cours d'enseignement diffusé sur internet ). Nous avons aussi mis en place un système de fuseaux horaires.`,
-    tags: ["React.Js", "Rails API", "JavaScript", "Redux", "JWT-tokens", "PostgreSQL"],
+    isDead: true,
+    link: "https://clonebook-super.netlify.app/",
+    code: "https://github.com/HugoCalmels/react-social-network-redux",
+    image: vv1,
+    shortDescription: "Application de gestion de sessions d'apprentissage en groupe avec fonctionnalités : <br> - Connexion et persistance des données <br>- Création et gestion de sessions d'apprentissage <br>- Système de gestion des fuseaux horaires <br>- Interface utilisateur pour rejoindre des sessions <br> - Sécurisé par jwt-token <br> Technologies : Ruby/React" ,
+    longDescription: "Learnroom était un projet de groupe réalisé en fin de bootcamp, où nous étions quatre membres à travailler ensemble. Ce projet visait à créer une plateforme pour gérer et rejoindre des sessions d'apprentissage collaboratif en ligne, en se concentrant principalement sur les MOOC (Massive Open Online Courses). En tant que membre de l'équipe, j'étais responsable du développement du backend et de la page de profil utilisateur. Bien que j'aie appris beaucoup sur la collaboration en équipe et l'utilisation de GitHub dans un environnement de groupe, j'ai rencontré des défis importants en raison de mon niveau de compétence limité à l'époque. <br> - Création et gestion de sessions d'apprentissage où les utilisateurs pouvaient créer des sessions et inviter d'autres participants. <br> - Système de gestion des fuseaux horaires pour organiser les sessions en fonction des différents fuseaux horaires des utilisateurs, bien que ce système ait été moins intuitif que les solutions modernes basées sur UTC. <br> - Page de profil utilisateur permettant aux utilisateurs de gérer leur information personnelle et de voir les sessions auxquelles ils sont inscrits. <br > - Intégration backend pour gérer les données des utilisateurs et des sessions.",
+    tags: [
+      {
+        title: "React",
+        icon: "<FaReact />"
+      },
+      {
+        title: "Ruby",
+        icon: "<diDiRuby />"
+      },
+      {
+        title: "RubyOnRails",
+        icon: "<SiRubyonrails />"
+      },
+      {
+        title: "Postgresql",
+        icon: "<SiPostgresql />"
+      },
+    ],
     features: [
       {
-        title: "1 - Inscription",
-        screenshot: LearnroomAuth,
-        description: `Pour profiter de l'application l'utilisateur doit s'enregistrer.
+        title: "Homepage",
+        screenshot:vv1,
+        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
+        Il est également posssible changer son mot de passe.
         `
       },
       {
-        title: "2 - Créer/rejoindre une session",
-        screenshot: LearnroomJoin,
-        description: `Chaque utilisateur peut créer ou rejoindre une session, selon la liste de MOOC que nous avons défini ( un MOOC est un cours d'enseignement diffusé sur internet ).
+        title: "Connexion",
+        screenshot: vv2,
+        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
+        Il est également posssible changer son mot de passe.
         `
       },
       {
-        title: "3 - Panel équipe",
-        screenshot: LearnroomTeam,
-        description: `Exemple du panel d'une session avec les membres de l'équipe.
+        title: "Sessions",
+        screenshot: vv3,
+        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
+        Il est également posssible changer son mot de passe.
         `
       },
       {
-        title: "3 - Profil utilisateur",
-        screenshot: LearnroomProfile,
-        description: `Ici l'utilisateur peut éditer son nom, et son fuseau horaire. Il a aussi accès à l'historique des sessions auxquelles il a participé.
+        title: "Session edit",
+        screenshot: vv4,
+        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
+        Il est également posssible changer son mot de passe.
         `
       },
+      {
+        title: "User profile",
+        screenshot: vv5,
+        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
+        Il est également posssible changer son mot de passe.
+        `
+      },
+
+    
+      
+
     ]
   },
 ]
-
-// projets retirés de la liste
-
-/*
-{
-    title: "Blog automatisé",
-    ref: "blog",
-    link: "https://site-temporaire-blog-de-gaelle.netlify.app/gaelle-boucherit",
-    code: "https://github.com/HugoCalmels/blog",
-    image: blogDessins,
-    shortDescription: "Une application pour poster des photos/vidéos qui a pour vocation d'être un site de publication d'oeuvres d'art.",
-    longDescription: `Fraîchement réalisé, ceci n'est pas la version finale du site c'est une MVP ( Minimum Viable Product ). C'est une application qui a pour but d'aider le client ( ma mère ) à poster du contenu sur son site, sans n'y connaître rien en développement informatique. Il reste quelques fonctionnalités à ajouter, à revoir l'architecture front ( pages & menus ), et aussi à travailler sur le style de manière générale ( polices, couleurs, design ). Mais l'application est déjà pleinement fonctionnelle et vous pouvez aller y jeter un oeil. `,
-    tags: ["React.Js", "Rails API", "JavaScript", "JWT-tokens", "PostgreSQL", "AWS"],
-    features: [
-      {
-        title: "1.1 - Index du site",
-        screenshot: blogIndex,
-        description: `Voici un apperçu de la page index.
-        `
-      },
-      {
-        title: "1.2 - Index du site en admin",
-        screenshot: blogIndex3,
-        description: `Le principe de cette application, est de rendre un maximum de choses modulables et modifiables.
-        `
-      },
-      {
-        title: "2.1 - Partie administrateur",
-        screenshot: blogLogin,
-        description: `L'admin devra s'authentifier. Chaque requête de changement de contenu du site est protégée par un token généré aléatoirement et regénéré à chaque nouvelle connexion.
-        `
-      },
-      {
-        title: "2.2 - Page dessins en admin",
-        screenshot: blogDessins2,
-        description: `L'admin pourra publier/éditer/supprimer des catégories, et il pourra publier/éditer/supprimer des fichiers images appartenant à ces catégories. Il n'y a aucun changement de page lors des manipulations, ce qui rend l'expérience utilisateur agréable.
-        `
-      },
-      {
-        title: "2.3 - Page performances en admin",
-        screenshot: blogPerf,
-        description: `L'admin pourra publier/éditer/supprimer des catégories, et il pourra publier/éditer/supprimer des fichiers vidéos appartenant à ces catégories, ainsi qu'un lien vers un site existant.
-        `
-      },
-      {
-        title: "3.1 - Newsletter",
-        screenshot: blogNewsletter1,
-        description: `Chaque utilisateur a la possiblité de s'abonner à la newsletter du site. Il a aussi la possibilité de se désabonner avec un lien présent dans chaque mail de newsletter.
-        `
-      },
-      {
-        title: "3.2 - Newsletter",
-        screenshot: blogNewsletter2,
-        description: `Voici à quoi ressemble la base de données actuelle concernant la newsletter. Chaque adresse email recevra une newsletter envoyée depuis le site.
-        `
-      },
-      {
-        title: "3.3 - Newsletter",
-        screenshot: blogNewsletter3,
-        description: `L'admin devra créer son template sur un site tiers, et copier le code HTML du template dans le champ prévu à cet effet. Une prévisualisation est présente pour voir à quoi ressemblera l'email.
-        `
-      },
-    ]
-  },
-
-  {
-    title: "Portofolio v1",
-    ref: "portofolio-v1",
-    link: "https://portofolio-hugo-calmels.netlify.app/",
-    code: "https://github.com/HugoCalmels/JS_Portofolio",
-    image: portofoliov1,
-    shortDescription: "Un portofolio que j'ai jugé trop peu professionel au niveau du design.",
-    longDescription: `Réalisé en avril 2022, c'est mon ancien portofolio. Depuis j'ai relevé mon niveau en design, en apportant une touche plus professionnelle. En plus du design, mon nouveau portofolio est plus simple, plus performant, et plus complet que l'ancien. `,
-    tags: ["JavaScript", "Google API"],
-    features: [
-      {
-        title: "Google API",
-        screenshot: portofoliov1API,
-        description: `Capacité à utiliser les API de Google.
-        `
-      },
-    ]
-  },
-
-*/

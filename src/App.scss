@@ -1,5 +1,6 @@
 @import "./variables";
 html {
+
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -13,6 +14,7 @@ html {
 body {
   margin: 0;
   font-family: "Outfit";
+  background-color: $new_white2;
 }
 .app {
   max-width: 100vw;
@@ -21,7 +23,7 @@ body {
 .main-content {
   height: 100%;
 
-  margin-top: 50px;
+
   min-height: calc(100vh - 75px - 75px);
   padding-right: 15px;
   padding-left: 15px;

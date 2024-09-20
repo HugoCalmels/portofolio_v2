@@ -1,9 +1,33 @@
+@import "../variables";
 .main-default {
   max-width: 1180px;
 
   margin: auto;
   display: flex;
   flex-direction: column;
+  @media (max-width: 1300px) {
+    margin: 0 50px;
+  }
+  @media (max-width: 550px) {
+    margin: 0 10px;
+  }
+  @media (max-width: 400px) {
+    margin: 0 0;
+  }
+}
+.homepage-custom-line{
+
+
+
+  width: 66%;
+  height: 2px;
+  background-color: $new_blue;
+  position: relative;
+  z-index: 99999999999999;
+
+  opacity: 0.15;
+  margin:auto;
+  margin-top: 75px;
 }
 
 .index-fixed-btns-container {
@@ -33,4 +57,50 @@
 .if-btn:hover {
   transition: 0.15s;
   transform: scale(1.05);
+}
+
+.homepage-background-image{
+  box-sizing: border-box;
+  position: absolute; /* Utilisez 'fixed' plutôt que 'absolute' pour maintenir la position par rapport à la fenêtre, même lors du défilement */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+
+  overflow: hidden;
+
+}
+
+.homepage-background-image img{
+  width: 100%; /* Pour que l'image occupe 100% de la largeur de son conteneur */
+  height: 100%; /* Pour que l'image occupe 100% de la hauteur de son conteneur */
+  object-fit: cover; /* Pour remplir le conteneur tout en conservant les proportions */
+  object-position: right;
+  @media (max-width: 550px) {
+    object-position: center;
+  }
+}
+.skills-gradiant{
+  position: absolute;
+  height: calc(4.5rem + 30px);
+  top: 100vh;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgb(218,213,241);
+background: linear-gradient(180deg, rgba(218,213,241,1) 0%, rgba(252,243,245,1) 100%);
+}
+
+
+.projects-bg-wrapper {
+  background-color: $purple_op; /* Exemple avec une couleur violette avec opacité */
+
+  left: 0;
+  width: 100%;
+  position: absolute;
+  margin-top: 50px;
 }

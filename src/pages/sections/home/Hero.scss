@@ -1,56 +1,48 @@
 @import "../../../variables";
 .hero-wrapper {
-  margin-top: 45px;
+
 
   display: flex;
   flex-direction: row;
-  max-height: 500px;
 
-  height: auto;
-  @media (max-width: 650px) {
-    flex-direction: column;
-    max-height: 100%;
-  }
+  height: calc(100vh - 75px);
+
+  position: relative;
+  z-index: 50;
+
+
 }
 
 .hero-content {
+  margin-top: 100px;
   flex: 1;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 
-  padding: 15px 0px;
-  @media (max-width: 650px) {
-    justify-content: center;
-    align-items: center;
-  }
+
+
+
 }
 
 .hero-img {
   flex: 1;
-  @media (max-width: 875px) {
-    margin-top: 30px;
-  }
+
 }
 
 .hero-content-title {
   position: relative;
+  z-index: 50;
 
-  @media (max-width: 850px) {
-    max-width: 300px;
-    display: flex;
-    justify-content: center;
-  }
+  margin-top: 50px;
+
+
 }
 .hero-top {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  @media (max-width: 650px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
 }
 .hero-content-title-stain {
   position: absolute;
@@ -58,57 +50,43 @@
   margin: auto;
   bottom: -10px;
 
-  @media (max-width: 650px) {
-    top: 0;
-    bottom: -15px;
-    left: 0;
-    right: 0;
-  }
+
 }
 
-.hero-content-title-stain svg {
-  @media (max-width: 875px) {
-    width: 70%;
-    height: 70%;
-  }
-  @media (max-width: 650px) {
-    width: 100%;
-    height: 100%;
-    left: 30px;
-  }
-}
+
 
 .hero-content-title h1 {
   margin: 0;
-  font-size: 50px;
+  font-size: 4.5rem;
   position: relative;
   z-index: 10;
-
-  width: auto;
-
-  @media (max-width: 875px) {
-    font-size: 35px;
+  font-weight: 600;
+  width: 90%;
+  font-family: "Bree Serif";
+  letter-spacing: 1px;
+  color: $new_black;
+  @media (max-width: 800px) {
+    font-size: 3rem;
   }
-
-  @media (max-width: 650px) {
-    //max-width: 300px;
-    max-width: 100%;
-    text-align: center;
-    //max-width: 300px;
+  @media (max-width: 550px) {
+    font-size: 2rem;
   }
 }
 .hero-content-text {
   //margin-top: 15px;
-  max-width: 350px;
+
 }
 .hero-content-text p {
   margin: 0;
-
-  font-size: 18px;
-  font-weight: 600;
-  @media (max-width: 650px) {
-    text-align: center;
+  font-family: "Bree Serif";
+  color: $new_black;
+  letter-spacing: .5px;
+  font-size: 26px;
+  font-weight: 500;
+  @media (max-width: 550px) {
+    font-size: 21px;
   }
+
 }
 .hero-content-buttons {
   //margin-top: 60px;
@@ -118,9 +96,7 @@
   height: 100%;
   gap: 15px;
   margin-top: 45px;
-  @media (max-width: 375px) {
-    flex-direction: column;
-  }
+
 }
 .hero-btn {
   border: none;
