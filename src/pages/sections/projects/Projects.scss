@@ -310,8 +310,8 @@ font-weight: 700;
 
 
 .projects-card:nth-child(2n) {
-  margin-top: 350px;
-  margin-bottom: -250px;
+  margin-top: 250px;
+  margin-bottom: -150px;
   @media (max-width: 800px) {
     margin-top: 0;
     margin-bottom: 0;
@@ -328,18 +328,43 @@ font-weight: 700;
 
 }
 .projects-card:nth-child(2) {
-
-  margin-bottom: -275px;
+  margin-bottom: -200px;
   @media (max-width: 800px) {
     margin-top: 0;
     margin-bottom: 0;
   }
 }
 .projects-card:nth-child(4) {
-  margin-top: 275px;
+  margin-top: 200px;
   @media (max-width: 800px) {
     margin-top: 0;
     margin-bottom: 0;
   }
 }
 
+
+.projects-card:nth-child(5) {
+  margin-top: -75px;
+
+
+
+  @media (max-width: 1300px) {
+    margin-top: -50px;
+  }
+  @media (max-width: 1065px) {
+    margin-top: -75px;
+  }
+  @media (max-width: 1008px) {
+    margin-top: -25px;
+  }
+  @media (max-width: 940px) {
+    margin-top: -50px;
+  }
+  @media (max-width: 894px) {
+    margin-top: -75px;
+  }
+  @media (max-width: 800px) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

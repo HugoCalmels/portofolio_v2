@@ -38,6 +38,27 @@ const ProjectReader = () => {
     navigate(-1);
   };
 
+  function getIcon(title) {
+    switch (title) {
+      case "React":
+        return <FaReact className="prb-icon-image"/>;
+      case "Ruby":
+        return <DiRuby className="prb-icon-image"/>;
+      case "RubyOnRails":
+        return <SiRubyonrails className="prb-icon-image"/>;
+      case "Postgresql":
+        return <SiPostgresql className="prb-icon-image" />;
+      case "Angular":
+        return <FaAngular className="prb-icon-image" />;
+      case "Java":
+        return <FaJava className="prb-icon-image" />;
+      case "SpringBoot":
+        return <SiSpringboot className="prb-icon-image"/>;
+      default:
+        return null; // Ou une icône par défaut si nécessaire
+    }
+  }
+
   return (
     <>
       <div className="projects-details-bg-wrapper"></div>
@@ -70,6 +91,15 @@ const ProjectReader = () => {
                 <p dangerouslySetInnerHTML={{ __html: foundProject.longDescription }}></p>
               </div>
             </div>
+            <div className="prb-techstacks-container">
+                  {foundProject.tags.map((tag) => (
+                    <div className="prb-techstack-entity">
+                      {getIcon(tag.title)} {/* Utiliser une fonction pour obtenir l'icône appropriée */}
+                      <p>{tag.title}</p>
+                    </div>
+                  ))}
+                
+                </div>
           </div>
 
           <div className="project-reader-features-list">

@@ -204,6 +204,7 @@
   min-height: 100%;
   align-items: flex-start;
   justify-content:  center;
+  flex-direction: column;
 
 }
 .project-reader-box {
@@ -501,7 +502,7 @@
 }
 .prb-techstacks-container{
   display: flex;
-
+  align-self:center;
   align-items: center;
   gap: 15px;
   margin-top: 15px;

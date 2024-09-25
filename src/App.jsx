@@ -67,33 +67,43 @@ function App() {
   }, []);
 
   const navigateTo = (arg) => {
+    console.log("trigger")
     // Vérifie si on est sur une page de projet
     const isOnProjectPage = location.pathname.startsWith("/projets/");
-
-    console.log('TRIGGERED')
   
-    // Vérifie la route actuelle pour la homepage
-    if (!isOnProjectPage && location.pathname === "/" && (arg === "skills" || arg === "projects" || arg === "contact")) {
+    // On vérifie si on essaie d'accéder à la section des projets
+    if (arg === "projects") {
+      const targetElement = document.querySelector(`#projects`);
+  
+      // On utilise setTimeout pour s'assurer que le composant est monté
+      setTimeout(() => {
+        if (targetElement) {
+          const navbarHeight = 75; // Ajustez cela si nécessaire
+          const offset = navbarHeight;
+  
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+  
+          window.scrollBy(0, -offset);
+        }
+      }, 100); // Vous pouvez ajuster le délai si nécessaire
+    } else if (!isOnProjectPage && (arg === "skills" || arg === "contact")) {
       const targetElement = document.querySelector(`#${arg}`);
-      console.log(`Navigating to: ${arg}`);
-      console.log(`Target Element:`, targetElement);
   
-      if (!targetElement) {
-        console.error(`Element with ID ${arg} not found.`);
-        return;
+      if (targetElement) {
+        const navbarHeight = 75; // Ajustez cela si nécessaire
+        const offset = navbarHeight;
+  
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+  
+        window.scrollBy(0, -offset);
       }
-  
-      const navbarHeight = 75;
-      const offset = navbarHeight;
-  
-      targetElement.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-  
-      window.scrollBy(0, -offset);
     } else {
-      // Pour d'autres routes ou pages, gérer autrement
       console.log(`Route ${location.pathname} ne nécessite pas de défilement.`);
     }
   
@@ -117,7 +127,7 @@ function App() {
           />
 
           <main className="main-content">
-          <ScrollToTop/>
+         
             <Routes>
               <Route
                 path="/"

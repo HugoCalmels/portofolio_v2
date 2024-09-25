@@ -30,8 +30,10 @@ const Skills = (props) => {
           <div className="skills-content-text">
 
             <div className="skills-content-intro">
-              <p>Développeur fullstack en reconversion, je me concentre sur des projets personnels pour renforcer mes compétences en front-end et back-end. Mon portfolio témoigne de mon parcours et de mon apprentissage dans le domaine du développement web.<br/>
-En dehors du travail, j’apprécie les montagnes et les activités sportives. Passionné de jeux vidéo, je passe beaucoup de temps à explorer des titres que j’affectionne.
+              <p>Développeur fullstack en reconversion, j'ai développé de nombreux projets web pour acquérir suffisamment d'expérience et réaliser mon objectif : devenir développeur professionnel.<br/>
+               
+                En dehors du développement j'aime bien les randonnées en montagne et les jeux-vidéos.<br />
+
               </p>
             </div>
 
