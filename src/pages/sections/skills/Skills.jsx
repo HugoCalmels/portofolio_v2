@@ -103,9 +103,8 @@ const Skills = (props) => {
               <div className="skills-qualities-entity-content">
                 <h5>Reconversion</h5>
                 <p>
-                  À 30 ans passés, sans diplôme et avec des expériences professionnelles peu satisfaisantes, j’ai eu une prise de conscience décisive.<br />
-                  Je me suis lancé, et j’ai complété le Bootcamp <a href="https://www.thehackingproject.org/" target="_blank">TheHackingProject</a> de développeur fullstack en 6 mois, où j’ai été parmi les rares à réussir.
-                  
+                Après mes 30 ans, j'ai décidé de réorienter ma carrière vers le développement web.<br/>
+                 En six mois, j'ai complété le Bootcamp <a href="https://www.thehackingproject.org/" target="_blank">TheHackingProject</a> en tant que développeur fullstack, faisant partie du peu de participants ayant réussi.
                 </p>
               </div>
             </div>

@@ -164,7 +164,7 @@ const Contact = (props) => {
             <span>
               <RiMapPinLine className="contact-line-image" />
             </span>
-            <p>www.portofolio-hugo-calmels.com</p>
+            <p>www.hugo-calmels.fr</p>
           </div>
         </div>
         </div>
