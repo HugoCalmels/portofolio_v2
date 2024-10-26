@@ -13,6 +13,11 @@ import { GiArtificialIntelligence } from "react-icons/gi";
 import { AiTwotoneCode } from "react-icons/ai";
 import { LiaBabyCarriageSolid } from "react-icons/lia";
 import { AiOutlineCode } from "react-icons/ai";
+import { FaGears } from "react-icons/fa6";
+import { FaLaptopCode } from "react-icons/fa6";
+import { FaCode } from "react-icons/fa6";
+import { FaHandsHelping } from "react-icons/fa";
+
 const Skills = (props) => {
   return (
     <section
@@ -30,9 +35,10 @@ const Skills = (props) => {
           <div className="skills-content-text">
 
             <div className="skills-content-intro">
-              <p>Développeur fullstack en reconversion, j'ai développé de nombreux projets web pour acquérir suffisamment d'expérience et réaliser mon objectif : devenir développeur professionnel.<br/>
+              <p>Développeur Full Stack junior, je me spécialise dans la création d’applications web avec une approche pratique et un esprit d’apprentissage continu.<br/>
                
-                En dehors du développement j'aime bien les randonnées en montagne et les jeux-vidéos.<br />
+              Je suis prêt à mettre mes compétences au service de projets ambitieux en CDI, CDD, contrat de professionnalisation ou mission freelance, pour contribuer activement aux projets et continuer de développer mon expertise.<br />
+              Mon objectif est de produire un code propre et optimisé et d’apporter de la valeur à chaque mission.<br/> En dehors du développement, j’apprécie les randonnées en montagne et les jeux vidéo.
 
               </p>
             </div>
@@ -98,34 +104,33 @@ const Skills = (props) => {
           <div className="skills-qualities-container">
 
             <div className="skills-qualities-entity">
-            <LiaBabyCarriageSolid  className="skills-qualities-entity-image"/>
+            <FaCode  className="skills-qualities-entity-image"/>
               
               <div className="skills-qualities-entity-content">
-                <h5>Reconversion</h5>
+                <h5>Frontend</h5>
                 <p>
-                Après mes 30 ans, j'ai décidé de réorienter ma carrière vers le développement web.<br/>
-                 En six mois, j'ai complété le Bootcamp <a href="https://www.thehackingproject.org/" target="_blank">TheHackingProject</a> en tant que développeur fullstack, faisant partie du peu de participants ayant réussi.
+                  Je suis force de proposition : je dessine mes idées sur Figma pour échanger avec l’équipe ou le client, et je sais reproduire fidèlement une maquette en interface utilisateur. <br />
+                  J’ai aussi un attrait particulier pour la création de formulaires personnalisés et l’amélioration continue des interfaces selon les retours.
                 </p>
               </div>
             </div>
 
             <div className="skills-qualities-entity">
-            <AiOutlineCode className="skills-qualities-entity-image"/>
+            <FaGears className="skills-qualities-entity-image"/>
               <div className="skills-qualities-entity-content">
-                <h5>Autodidacte</h5>
-                <p>Suite au Bootcamp, j'ai dédié une grande partie de mon temps à un apprentissage intensif en autodidacte, en me concentrant sur des projets concrets pour développer mes compétences.<br/>
-                  J'utilise divers outils comme YouTube, Google, ChatGPT, Midjourney, Reddit, et Notion pour m'autoformer et résoudre des problèmes.
-            
+                <h5>Backend</h5>
+                <p>Je crée des systèmes pour faire circuler les données et assurer leur sécurité.<br />
+                J’ai de l’expérience en gestion de bases de données, en gestion des accès utilisateurs, en mise à jour en temps réel, en optimisation des performances, en gestion des erreurs, en envoi d’emails automatiques et en gestion de fichiers (images, vidéos).
                 </p>
               </div>
             </div>
 
             <div className="skills-qualities-entity">
-            <GiHumanPyramid className="skills-qualities-entity-image"/>
+            <FaHandsHelping className="skills-qualities-entity-image"/>
               <div className="skills-qualities-entity-content">
                 <h5>Mentoré</h5>
-                <p>Parallèlement à mon apprentissage autonome, j'ai eu la chance de bénéficier d'un mentorat.<br/>
-                  Ce soutien m'a permis d'affiner mes compétences techniques et d'approfondir ma compréhension des concepts clés, enrichissant ainsi mon parcours professionnel.
+                <p>J’ai été mentoré par un développeur professionnel sur Java et Angular, qui a validé et enrichi mes bonnes pratiques.<br/>
+                Cette expérience m’a permis de mieux travailler en équipe, de gérer des conflits Git, et de produire un code clair et facile à maintenir.<br/> J’ai aussi gagné en organisation et en capacité à collaborer sur des projets.
 
                 </p>
               </div>

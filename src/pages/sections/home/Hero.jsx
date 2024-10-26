@@ -12,7 +12,7 @@ const Hero = (props) => {
             <h1>Hugo Calmels</h1>
           </div>
           <div className="hero-content-text">
-            <p>Développeur d'applications web</p>
+            <p>Développeur Full Stack</p>
           </div>
         </div>
       
