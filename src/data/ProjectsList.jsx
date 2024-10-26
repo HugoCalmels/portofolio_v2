@@ -83,7 +83,7 @@ export const ProjectsList = [
     link: "https://app.dota-arena.fr/home",
     code: "private",
     image: sq1,
-    shortDescription: "Application web ouverte à la communauté française de DotA2, et prochainement à la communauté internationale. C'est un outil de mise en relation pour les joueurs et les équipes.<br> Technologies : Java/Angular",
+    shortDescription: "Projet collaboratif pour mettre en relation les joueurs et équipes de DotA2, où j'ai appris Java et Angular.<br> Actuellement au stade MVP, avec des améliorations prévues pour attirer plus d’utilisateurs.<br> Technologies : Java/Angular",
     longDescription: "Projet réalisé en duo avec mon mentor, autour de l'univers du jeu vidéo DotA 2. Personnellement je débutais sur Java et Angular, et mon mentor a su m'accompagner tout au long du projet. <br> Un utiliseur s'enregistre avec son compte Steam.<br> Pour la partie Team/Scrim : <br> Un utilisateur peut créer/rejoindre une Team, créer/rejoindre un Scrim via une proposition de Scrim que l'entité adverse pourra accepter/décliner. C'est un outil pour planifier des matchs à l'avance en format UTC, donc un joueur du Brésil pourra facilement planifier un match avec un joueur de France. <br> Pour la partie Lobby Sauvage : <br> Un utilisateur peut créer/rejoindre un Lobby Sauvage en temps réel. C'est un outil basé dans l'instant présent plutot que la planification de matchs à l'avance, et dès l'instant ou le Lobby Sauvage a atteint son nombre maximal de joueurs, alors il est lancé automatiquement.<br> La partie Lobby Sauvages manquant de fonctionnalités pour se démarquer du marché, nous avons décidé de la fermer temporairement.<br> Fiche technique :<br> - Mise en place d'un système sécurisé avec Spring Security, JWT-tokens, refresh tokens, et cookies HTTP-only.<br>- Intégration des SSE (Server-Sent Events) et des Websockets pour une communication en temps réel.<br>- Authentification rapide via OpenID Steam, permettant de récupérer les données de joueur (ID DotA, MMR, avatar) à partir des API Stratz et Steam. <br>- Gestion des fuseaux horaires en UTC pour planifier des matchs internationaux. <br>- Amélioration de l'interface utilisateur pour une expérience fluide et intuitive.",
     tags: [
       {
@@ -176,7 +176,7 @@ export const ProjectsList = [
     link: "https://clonebook-super.netlify.app/",
     code: "https://github.com/HugoCalmels/react-social-network-redux",
     image: Clonebook,
-    shortDescription: "Projet vitrine dans lequel j'ai recopié l'interface de Facebook au pixel près et j'ai réinterprété les fonctionnalités principales d'un utilisateur.<br> Technologies : Ruby/React" ,
+    shortDescription: "Version simplifiée de Facebook, reproduite au pixel près. <br>Projet vitrine qui montre mon savoir-faire pour recréer l’interface et les fonctionnalités principales d'un réseau social, sans objectif d’acquisition d’utilisateurs.<br> Technologies : Ruby/React" ,
     longDescription: "J'ai créé un clone de Facebook seul en quelques mois. Bien qu'il soit fonctionnel avec un backend et une base de données, ce projet sert surtout à montrer mes compétences, car personne n'utiliserait un clone limité face à l'original.<br> Ce fut néamoins un très bon exercice même s'il manque d'originalité et d'utilisation concrète des utilisateurs, il m'a permis de répérer certains designs patterns utilisés par Facebook comme d'autres grandes compagnies.<br> Fiche technique :<br> - Fonctionnalités : Connexion, récupération de mot de passe par email, fil d'actualité, publication de contenu (texte et image), système de commentaires et de likes, invitations et suggestions d'amis.<br>- Utilisation de Redux pour gérer de grosse quantités de données factices.<br> - Optimisation des requêtes et résolution de problèmes en backend, notamment concernant la complexité temporelle.",
     tags: [
       {
@@ -237,84 +237,7 @@ export const ProjectsList = [
       },
     ]
   },
-  {
-    title: "Blog Automatisé (fermé)",
-    titleDetails: "Blog Automatisé",
-    ref: "blog",
-    isDead: true,
-    link: "https://clonebook-super.netlify.app/",
-    code: "https://github.com/HugoCalmels/react-social-network-redux",
-    image: blog5,
-    shortDescription: "Projet pour un artiste qui voulait pouvoir manager ses galeries directement depuis l'interface web, inclus également une newsletter.<br>  Technologies : Ruby/React" ,
-    longDescription: "Projet non abouti. <br> Je me suis lancé dans la création d'un CMS customisé de manière bénévole. J'étais très concentré sur l'automatisation et la fiabilité des fonctionnalités, tandis que le client souhaitait prioriser le design. Avec des visions différentes et étant donné la nature bénévole du projet, j'ai finalement décidé d'arrêter, car je ne me sentais pas suffisamment motivé pour continuer dans cette direction.<br> Fiche technique : <br> - Gestion automatisée des œuvres d'art (images, textes, vidéos) par année et type, avec tri dynamique. <br> - Système de gestion de contenu (CMS) pour éditer la homepage et la plupart des pages du site via une interface administrateur intuitive. <br> - Newsletter automatisée : envoi d'e-mails à tous les abonnés via un simple champ texte. <br> - Système d'abonnement et gestion des utilisateurs <br> - Formulaires de création et d'édition pour gérer différentes sections du site (œuvres, événements, etc.). <br> - Sécurisation et gestion des utilisateurs avec une interface admin dédiée permettant la modification de données sans intervention manuelle. <br>",
-    tags: [
-      {
-        title: "React",
-        icon: "<FaReact />"
-      },
-      {
-        title: "Ruby",
-        icon: "<diDiRuby />"
-      },
-      {
-        title: "RubyOnRails",
-        icon: "<SiRubyonrails />"
-      },
-      {
-        title: "Postgresql",
-        icon: "<SiPostgresql />"
-      },
-    ],
-    features: [
-      {
-        title: "Newsletter",
-        screenshot: blog5,
-        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
-        Il est également posssible changer son mot de passe.
-        `
-      },
-      {
-        title: "Connexion",
-        screenshot: blog1,
-        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
-        Il est également posssible changer son mot de passe.
-        `
-      },
-      {
-        title: "Galerie dessins",
-        screenshot: blog3,
-        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
-        Il est également posssible changer son mot de passe.
-        `
-      },
-      {
-        title: "Admin dessins",
-        screenshot: blog2,
-        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
-        Il est également posssible changer son mot de passe.
-        `
-      },
-      {
-        title: "Admin homepage",
-        screenshot: blog4,
-        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
-        Il est également posssible changer son mot de passe.
-        `
-      },
-      {
-        title: "Admin performances",
-        screenshot: blog6,
-        description: `Chaque utilisateur a la possibilité de créer un compte, il devra confirmer son identité avec un email de confirmation.
-        Il est également posssible changer son mot de passe.
-        `
-      },
-
-      
-      
-
-    ]
-  },
-
+  
   {
     title: "Habits Tracker (fermé)",
     titleDetails: "Habits Tracker",
@@ -323,7 +246,7 @@ export const ProjectsList = [
     link: "https://clonebook-super.netlify.app/",
     code: "https://github.com/HugoCalmels/react-social-network-redux",
     image: ha1,
-    shortDescription: "Application qui a été ouverte au public et a floppé en raison de mon inexpérience. Je venais de terminer mon Bootcamp depuis 2 mois quand j'ai commencé.<br> Technologies : Ruby on Rails",
+    shortDescription: "Application de suivi des habitudes pour un usage quotidien.<br> Projet personnel où j'ai exploré des fonctionnalités avancées en backend et amélioré mes bases en développement et création d’interfaces.<br> Technologies : Ruby on Rails",
     longDescription: "Habits Tracker était mon premier projet solo d'envergure après avoir terminé un bootcamp de développement. L'idée était de créer une application qui permet aux utilisateurs de suivre et d'analyser leurs habitudes au fil du temps, selon des cycles personnalisés (quotidien, hebdomadaire, mensuel). Ce projet m'a permis d'expérimenter à la fois du côté front-end et back-end, bien que j'aie rencontré de nombreux défis techniques en raison de mon manque d'expérience à l'époque. Bien que l'application ait fonctionné et ait été utilisée un temps par moi-même, elle souffrait de bugs, d'une interface peu intuitive et d'une complexité excessive dans la gestion des données. Je travaille actuellement à une version 2, en repartant de zéro. <br> Fiche technique : <br> - Création d'habitudes personnalisées avec des cycles quotidiens, hebdomadaires et mensuels, chacun avec un nombre de checkpoints défini par l'utilisateur. <br> - Visualisation des habitudes en temps réel avec des barres de progression colorées pour représenter l'évolution de chaque habitude (vert, orange, jaune, rouge). <br> - Statistiques détaillées avec un tableau de bord inspiré de l'interface calendrier de GitHub, affichant les habitudes réalisées selon des intervalles de temps définis. <br> - Gestion de données front-end et back-end pour organiser et afficher les habitudes en fonction de cycles.",
     tags: [
       {
@@ -389,7 +312,7 @@ export const ProjectsList = [
     link: "https://clonebook-super.netlify.app/",
     code: "https://github.com/HugoCalmels/react-social-network-redux",
     image: vv1,
-    shortDescription: "Projet de fin de Bootcamp que vous avons réalisé à 4 développeurs. C'est un outil de mise en relation pour trouver d'autres personnes qui souhaitent commencer un MOOC à plusieurs. <br> Technologies : Ruby/React" ,
+    shortDescription: "Application pour mettre en relation des personnes souhaitant suivre un MOOC ensemble. <br>Projet collaboratif réalisé en équipe de 4 développeurs, conçu pour faciliter les échanges entre apprenants. <br> Technologies : Ruby/React" ,
     longDescription: "Learnroom était un projet de groupe réalisé en fin de bootcamp, où nous étions quatre membres à travailler ensemble. Ce projet visait à créer une plateforme pour gérer et rejoindre des sessions d'apprentissage collaboratif en ligne, en se concentrant principalement sur les MOOC (Massive Open Online Courses). En tant que membre de l'équipe, j'étais responsable du développement du backend et de la page de profil utilisateur. Bien que j'aie appris beaucoup sur la collaboration en équipe et l'utilisation de GitHub dans un environnement de groupe, j'ai rencontré des défis importants en raison de mon niveau de compétence limité à l'époque.<br> Fiche technique :  <br> - Création et gestion de sessions d'apprentissage où les utilisateurs pouvaient créer des sessions et inviter d'autres participants.<br> - Système de gestion des fuseaux horaires pour organiser les sessions en fonction des différents fuseaux horaires des utilisateurs, bien que ce système ait été moins intuitif que les solutions modernes basées sur UTC. <br> - Page de profil utilisateur permettant aux utilisateurs de gérer leur informations personnelles et de voir les sessions auxquelles ils sont inscrits. <br > - Intégration backend pour gérer les données des utilisateurs et des sessions.",
     tags: [
       {
