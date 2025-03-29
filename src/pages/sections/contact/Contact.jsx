@@ -6,6 +6,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { BsHouse } from "react-icons/bs";
 import { BsTelephone } from "react-icons/bs";
 import { RiMapPinLine } from "react-icons/ri";
+import { FaLinkedin, FaGithub, FaGitlab } from "react-icons/fa";
 const Contact = (props) => {
   const btnStyle = { color: "white", width: "20px", height: "20px" };
   const btnStyle2 = { color: "black", width: "20px", height: "20px" };
@@ -62,9 +63,9 @@ const Contact = (props) => {
       id="contact"
       ref={props.contactWrapperElem}
     >
-      <div className="contact-title">
+             <div className="contact-main-title">
         <h2>Contact</h2>
-      </div>
+        </div>
 
       <div className="contact-content-container">
       <div className="contact-content">
@@ -142,18 +143,9 @@ const Contact = (props) => {
             <span>
               <BsHouse className="contact-line-image" />
             </span>
-            <p>13 rue pégot,</p>
+            <p>13 rue pégot, 31500 Toulouse</p>
           </div>
-          <div className="contact-line">
-            <span></span>
-            <p>31500 Toulouse</p>
-          </div>
-          <div className="contact-line">
-            <span>
-              <BsTelephone className="contact-line-image" />
-            </span>
-            <p>(+33)7.68.10.99.80</p>
-          </div>
+
           <div className="contact-line">
             <span>
               <HiOutlineMail className="contact-line-image" />
@@ -164,7 +156,28 @@ const Contact = (props) => {
             <span>
               <RiMapPinLine className="contact-line-image" />
             </span>
-            <p>www.hugo-calmels.fr</p>
+            <p><a href="https://hugo-calmels.fr/" target="_blank" rel="noopener noreferrer">https://hugo-calmels.fr/</a></p>
+            </div>
+            
+            <div className="contact-line">
+            <span>
+              <FaLinkedin className="contact-line-image" />
+            </span>
+            <p><a href="https://www.linkedin.com/in/hugo-calmels/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/hugo-calmels/</a></p>
+            </div>
+            
+            <div className="contact-line">
+            <span>
+              <FaGithub className="contact-line-image" />
+            </span>
+            <p><a href="https://github.com/HugoCalmels" target="_blank" rel="noopener noreferrer">https://github.com/HugoCalmels</a></p>
+            </div>
+            
+            <div className="contact-line">
+            <span>
+              <FaGitlab className="contact-line-image" />
+            </span>
+            <p><a href="https://gitlab.com/hugocalmels" target="_blank" rel="noopener noreferrer">https://gitlab.com/hugocalmels</a></p>
           </div>
         </div>
         </div>

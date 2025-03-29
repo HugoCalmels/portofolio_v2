@@ -11,16 +11,18 @@ import { BsArrowLeftCircle } from "react-icons/bs";
 import { BsArrowUpCircle } from "react-icons/bs";
 import { FaReact } from "react-icons/fa";
 import { DiRuby } from "react-icons/di";
-import { SiSpringboot } from "react-icons/si";
 import { FaAngular } from "react-icons/fa";
-import { SiPostgresql } from "react-icons/si";
+import { SiNgrx, SiPostgresql } from "react-icons/si";
 import { SiRubyonrails } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
-
+import { SiSpring } from "react-icons/si";
 import { useEffect } from "react";
-
-
-const ProjectReader = () => {
+import { FaAws } from "react-icons/fa";
+import { FaOpenid } from "react-icons/fa";
+import { SiRedux } from "react-icons/si";
+import { SiVite } from "react-icons/si";
+import { IoLogoJavascript } from "react-icons/io5";
+const ProjectReader = (props) => {
   const navigate = useNavigate();
   const location = useLocation();
   const ImagesReaderRef = useRef(null);
@@ -28,6 +30,9 @@ const ProjectReader = () => {
 
   const [selectedImage, setSelectedImage] = useState("");
   const foundProject = ProjectsList.find((el) => el.ref === project);
+
+  console.log(foundProject)
+
 
 
   useEffect(() => {
@@ -44,16 +49,28 @@ const ProjectReader = () => {
         return <FaReact className="prb-icon-image"/>;
       case "Ruby":
         return <DiRuby className="prb-icon-image"/>;
-      case "RubyOnRails":
+      case "RoR":
         return <SiRubyonrails className="prb-icon-image"/>;
-      case "Postgresql":
+      case "Postgres":
         return <SiPostgresql className="prb-icon-image" />;
       case "Angular":
         return <FaAngular className="prb-icon-image" />;
       case "Java":
         return <FaJava className="prb-icon-image" />;
-      case "SpringBoot":
-        return <SiSpringboot className="prb-icon-image"/>;
+      case "Spring":
+        return <SiSpring className="prb-icon-image" />;
+      case "OpenID":
+        return <FaOpenid className="prb-icon-image" />;
+      case "NgRx":
+        return <SiNgrx className="prb-icon-image" />;
+      case "Redux":
+        return <SiRedux className="prb-icon-image" />;
+      case "AWS S3":
+        return <FaAws className="prb-icon-image" />;
+      case "Vite":
+        return <SiVite className="prb-icon-image" />;
+      case "JavaScript":
+        return <IoLogoJavascript className="prb-icon-image"/>;
       default:
         return null; // Ou une icône par défaut si nécessaire
     }
@@ -70,7 +87,7 @@ const ProjectReader = () => {
             <div className="project-website-link-container">
               {foundProject.isDead ? (
                 <button className="project-website-link closed" disabled>
-                  Fermé
+                  Site fermé
                 </button>
               ) : (
                 <a
@@ -79,7 +96,7 @@ const ProjectReader = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Lien
+                  Lien vers le site
                 </a>
               )}
             </div>
@@ -87,27 +104,40 @@ const ProjectReader = () => {
 
           <div className="project-reader-content">
             <div className="project-reader-box">
+
+              
               <div className="prf-long-desc">
+                <h4>1. Description du projet</h4>
                 <p dangerouslySetInnerHTML={{ __html: foundProject.longDescription }}></p>
               </div>
-            </div>
-            <div className="prb-techstacks-container">
+
+              <div className="sp-section-2">
+                <h4>2. Fonctionnalités & Fiche technique</h4>
+                <p dangerouslySetInnerHTML={{ __html: foundProject.technical }}></p>
+              </div>
+              <div className="prb-techstacks-container">
+                <h4>3. Stack technique</h4>
+                <div className="prb-container">
                   {foundProject.tags.map((tag) => (
                     <div className="prb-techstack-entity">
                       {getIcon(tag.title)} {/* Utiliser une fonction pour obtenir l'icône appropriée */}
                       <p>{tag.title}</p>
                     </div>
                   ))}
-                
                 </div>
+                </div>
+            </div>
+            
           </div>
 
           <div className="project-reader-features-list">
+            <h4>4. Captures d'écran</h4>
+            <div className="prf-container">
             {foundProject.features.map((feature) => (
               <div className="prf-feature-wrapper" key={feature.title}>
                 <div className="prf-feature">
                   <div className="prf-text">
-                    <p>{feature.title}</p>
+                    <h6>{feature.title}</h6>
                   </div>
                   <div className="prf-img">
                     <img src={feature.screenshot} alt="project screenshot" />
@@ -115,6 +145,7 @@ const ProjectReader = () => {
                 </div>
               </div>
             ))}
+              </div>
           </div>
         </div>
       </section>

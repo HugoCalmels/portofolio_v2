@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 75px;
+  height: 60px;
   z-index: 300;
   padding-left: 15px;
   padding-right: 15px;
@@ -12,13 +12,13 @@
   align-items: center;
   background-color: $new_white2;
 
-  box-shadow: 0px 0px 1px rgba(32,46,115,.66);
+  border-bottom: 4px solid #495aae;
 
 }
 
 .navbar-container {
   height: 100%;
-  max-width: 1180px;
+
   width: 100%;
   margin: auto;
   display: flex;
@@ -26,6 +26,8 @@
   position: relative;
   z-index: 50;
   overflow: hidden;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 .navbar-home-btn {
   display: flex;
@@ -51,7 +53,7 @@
 
 }
 .nhb-logo-container img{
-  height: 50px;
+  height: 40px;
   width: auto;
   object-fit: fill;
 }
@@ -80,26 +82,25 @@
 }
 
 .nml-link {
-  color: $new_black;
-  font-size: 1.1rem;
-
-  text-decoration: none;
+  color: #333; /* Gris foncé, un peu moins que ton #090b11 pour moins d'agressivité */
+  font-size: 1.2rem; /* Augmenter légèrement la taille pour plus de lisibilité */
+  font-weight: 700; /* Poids intermédiaire pour pas trop charger */
+  text-decoration: none; /* Enlever la décoration de base */
   position: relative;
-  font-family: "Montserrat";
-  font-weight: 700;
-  color: #283044;
-  cursor:pointer;
+  font-family: "Montserrat", sans-serif; /* Une bonne police moderne */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Ajout d'une transition douce pour le survol */
 }
 
 .nml-link::before {
   content: "";
   position: absolute;
-  bottom: -15px;
+  bottom: -16px;
   left: 0;
   width: 0;
-  height: 3px;
-  background-color: $new_blue;
-  opacity: .5;
+  height: 4px;
+  background-color: #495aae;
+
   transition: all 0.2s ease-in-out;
 }
 
@@ -122,8 +123,8 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: $new_blue;
-  opacity: .5;
+  background-color: #495aae;
+
 }
 
 //
@@ -141,8 +142,8 @@
   left: 0;
   width: 100%;
   height:3px;
-  background-color: $new_blue;
-  opacity: .5;
+  background-color: #495aae;
+
 }
 //
 .nml-link.contact.active {
@@ -159,8 +160,8 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: $new_blue;
-  opacity: .5;
+  background-color: #495aae;
+
 }
 
 .nhb-title {
@@ -171,8 +172,8 @@
   font-weight: 700;
   transition: 0.3s;
   position: relative;
-  font-family: "Montserrat";
-  color: #283044;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
   @media (max-width: 800px) {
     font-size: 1rem;
   }
@@ -181,13 +182,12 @@
 .nhb-title::before {
   content: "";
   position: absolute;
-  bottom: -13px;
+  bottom: -16px;
   left: 0;
   width: 0;
-  height: 3px;
+  height: 4px;
+  background-color: #495aae;
 
-  background-color: $new_blue;
-  opacity: .5;
   transition: all 0.3s ease-in-out;
 }
 
@@ -202,8 +202,8 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: $new_blue;
-  opacity: .5;
+  background-color: #495aae;
+
   transition: all 0.3s ease-in-out;
 }
 
@@ -223,8 +223,8 @@
   width: 0;
   height: 3px;
 
-  background-color: $new_blue;
-  opacity: .5;
+  background-color: #495aae;
+
   transition: all 0.3s ease-in-out;
 }
 
@@ -325,19 +325,20 @@
   cursor:pointer;
   height: 25px;
   width: 25px;
-  color:$new_blue;
-  opacity: .9;
+  color:#495aae;
+
 }
 .black-logo:hover{
   transition: 0.1s;
 
-  opacity: 0.66;
+  opacity: 0.75;
+  transform: scale(1.025);
 }
 
 
 
 .nml-link-second-page {
-  color: #283044;
+  color: #495aae;
   font-size: 1.1rem!important;
 
   text-decoration: none;
@@ -355,8 +356,8 @@
   left: 0;
   width: 0;
   height: 3px;
-  background-color: $new_blue;
-  opacity: .5;
+  background-color: #495aae;
+
   transition: all 0.2s ease-in-out;
 }
 

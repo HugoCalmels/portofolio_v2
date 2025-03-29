@@ -28,8 +28,7 @@
   z-index: -3;
 }
 .project-reader-container {
-  margin-top: 30px;
-  margin-bottom: 30px;
+
 
 }
 .project-website-back-container{
@@ -70,7 +69,7 @@
 .project-reader-intro {
   position: relative;
 
-  margin-top: calc(75px + 30px);
+  margin-top: calc(60px);
 
   display: flex;
   flex-direction: row;
@@ -87,10 +86,13 @@
   z-index: 10;
   text-align: center;
   font-size: 3.5rem;
-    font-family: "Montserrat";
-    font-weight: 700;
-    color:$new_black;
-    margin:0;
+  font-family: "Poppins", sans-serif;
+  font-weight:600;
+  color: #090b11;
+  margin:0;
+  padding:0;
+  margin-top: 30px;
+  margin-bottom: 75px;
   @media (max-width: 875px) {
     font-size: 35px;
   }
@@ -103,7 +105,7 @@
   align-items: center;
   position: absolute;
   right: 0;
-  top:50%;
+
   bottom: 50%;
   @media (max-width: 700px) {
     position: relative;
@@ -126,7 +128,7 @@
     font-family: "Montserrat";
     font-size: 1.125rem;
     font-weight: 600;
-    background-color: rgba(32, 46, 115, 0.9);
+    background-color: #495aae;
     color: #FCF3F5;
     padding: 10px 20px;
     text-decoration: none;
@@ -381,8 +383,7 @@
 .project-reader-features-list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  margin-top: 15px;
+  margin-bottom: 50px;
   @media (max-width: 800px) {
     margin-top: 30px;
   }
@@ -502,13 +503,13 @@
 }
 .prb-techstacks-container{
   display: flex;
-  align-self:center;
-  align-items: center;
+  flex-direction: column;
   gap: 15px;
-  margin-top: 15px;
+
   @media (max-width: 700px) {
     flex-wrap: wrap;
   }
+  margin-bottom:50px;
 
 }
 .prb-techstack h6{
@@ -523,41 +524,110 @@
 .prb-techstack-entity{
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: rgba(32, 46, 115, 0.9);
-  border-radius: 45px;
+  gap:5px;
+ padding: 10px;
+
+  flex-direction: column;
+  border: 2px solid #090b11;
+  width: 75px;
+
 }
 
 .prb-icon-image{
-color: $new_white2;
-width: 20px;
-height: 20px;
+color:  #495aae;;
+width: 40px;
+height: 40px;
 
 }
 
 .prb-techstack-entity p{
   margin: 0;
-  font-family: "Noto Sans JP";
-  font-size: 0.9375rem;
-  color: #FCF3F5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem!important;
+  font-weight: 600!important;
+  color: #495aae!important;
   line-height: 1.35;
   margin-top: -2px;
 }
 
+.project-reader-box p{
+  font-family: "Montserrat", sans-serif;
+  color: #3a3d45;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.project-reader-box h4{
+  font-family: "Poppins", sans-serif;
+  color: #495aae;
+  font-weight: 600;
+  font-size: 1.75rem;
+  padding:0;
+  margin: 10px 0;
+}
+
+.project-reader-box ul{
+  list-style-type: none;
+  margin:0;
+  padding:0;
+}
+.project-reader-box li{
+  margin:0;
+  padding:0;
+  margin: 5px 0;
+}
+.project-reader-box li li{
+  margin-left: 20px;
+}
+
+.prf-long-desc{
+  margin-bottom: 50px;
+}
+
+.sp-section-2{
+  margin-bottom: 50px;
+}
+.prb-container{
+  display:flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.project-reader-features-list h4{
+  font-family: "Poppins", sans-serif;
+    color: #495aae;
+    font-weight: 600;
+    font-size: 1.75rem;
+    padding: 0;
+    margin: 10px 0;
+    margin-bottom: 30px;
+}
+
+.prf-container{
+  display:flex;
+  flex-direction: column;
+  gap:50px;
+}
+.prf-text h6{
+  margin:0;
+  padding:0;
+  color: #3a3d45;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+
+}
+
+.clonebook-li{
+  margin-left: 10px!important;
+}
 
 .prf-long-desc p{
-  margin: 0;
-    color: #6474a2;
-    line-height: 1.5;
-    font-family: "Noto Sans JP";
-    margin-top: 30px;
-    margin-bottom: 15px;
-    @media (max-width: 700px) {
-      font-size: 0.9375rem;
-    }
-    @media (max-width: 400px) {
-
-    }
-      
+  margin:10px 0;
+  line-height: 1.25; 
+}
+.sp-section-2 p{
+  line-height: 1.25; 
 }

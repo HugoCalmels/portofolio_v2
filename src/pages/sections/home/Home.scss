@@ -3,6 +3,95 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+
   scroll-margin-top: 75px;
+
+  padding-bottom: 75px;
+ // border-bottom: 4px solid #495aae;
+ max-width: 1110px;
+ margin:auto;
 }
+
+.home-testimonials{
+  margin-top:100px;
+  display:flex;
+  flex-direction: column;
+  padding: 0 30px;
+  align-items: center;
+  gap: 30px;
+}
+.ht-body{
+  display:flex;
+  flex-direction: row;
+  gap:60px;
+}
+.ht-unit{
+
+  max-width: 400px;
+  padding:30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+.home-testimonials h5{
+  margin: 0;
+  padding: 0;
+  margin: 10px 0;
+  font-size: 1.75rem;
+  color: #495aae;
+  font-weight: 600;
+}
+.ht-header-image {
+  display:flex;
+  align-items: center;
+
+}
+.ht-header-image img{
+  height:48px;
+  width: 48px;
+  border-radius: 50%;
+  object-fit:cover;
+  object-position: -50% 75%;
+}
+.ht-header{
+
+  display:flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+
+.ht-header-content{
+
+  margin-left: 15px;
+
+}
+
+.ht-header-content p{
+  margin: 0;
+  
+    color: #3a3d45;
+   
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.ht-text{
+  margin: 0;
+  
+  color: #3a3d45;
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+ line-height: 1.5;
+
+}
+
+/* exemple thp
+- photo
+- nom 
+- profession
+- texte/description/contenu
+*/

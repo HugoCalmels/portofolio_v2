@@ -1,6 +1,6 @@
 @import "../variables";
 .main-default {
-  max-width: 1180px;
+  //max-width: 1500px;
 
   margin: auto;
   display: flex;
@@ -27,7 +27,7 @@
 
   opacity: 0.15;
   margin:auto;
-  margin-top: 75px;
+  margin-top: 60px;
 }
 
 .index-fixed-btns-container {
@@ -102,5 +102,26 @@ background: linear-gradient(180deg, rgba(218,213,241,1) 0%, rgba(252,243,245,1) 
   left: 0;
   width: 100%;
   position: absolute;
-  margin-top: 50px;
+
 }
+
+.skills-bg-wrapper {
+  background-color: #DDDDF4;
+
+  left: 0;
+  width: 100%;
+  position: absolute;
+ // border-top: 4px solid #495aae;
+
+}
+
+.services-bg-wrapper {
+
+  z-index:3;
+  left: 0;
+  width: 100%;
+  position: absolute;
+ // border-top: 4px solid #495aae;
+
+}
+

@@ -36,6 +36,7 @@ function App() {
   const [section, setSection] = useState([]);
 
   useEffect(() => {
+    console.log("test app")
     const handleScroll = () => {
       let current = "";
       // Récupérer les éléments des sections
@@ -47,7 +48,7 @@ function App() {
       ];
 
       sectionsElements.forEach((section) => {
-        if (section && window.scrollY >= section.offsetTop - 75) {
+        if (section && window.scrollY >= section.offsetTop ) {
           current = section.getAttribute("id");
         }
       });
@@ -67,50 +68,36 @@ function App() {
   }, []);
 
   const navigateTo = (arg) => {
-    console.log("trigger")
-    // Vérifie si on est sur une page de projet
-    const isOnProjectPage = location.pathname.startsWith("/projets/");
+    console.log("trigger");
+    console.log(arg);
+
   
-    // On vérifie si on essaie d'accéder à la section des projets
-    if (arg === "projects") {
-      const targetElement = document.querySelector(`#projects`);
+    // Hauteur de la navbar fixe à 50px
+    const navbarHeight = 50;
   
-      // On utilise setTimeout pour s'assurer que le composant est monté
-      setTimeout(() => {
-        if (targetElement) {
-          const navbarHeight = 75; // Ajustez cela si nécessaire
-          const offset = navbarHeight;
+    const targetElement = document.querySelector(`#${arg}`);
+    console.log(targetElement);  // Vérifie si l'élément existe
   
-          targetElement.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
+    if (targetElement) {
+      // Position de l'élément cible par rapport à la page
+      const targetPosition = targetElement.offsetTop;
+      console.log(`Position de l'élément par rapport au haut de la page : ${targetPosition}px`);
   
-          window.scrollBy(0, -offset);
-        }
-      }, 100); // Vous pouvez ajuster le délai si nécessaire
-    } else if (!isOnProjectPage && (arg === "skills" || arg === "contact")) {
-      const targetElement = document.querySelector(`#${arg}`);
+      // Calculer la position ajustée pour la navbar
+      const targetScrollPosition = targetPosition - navbarHeight;
+      console.log(`Position après ajustement de la navbar : ${targetScrollPosition}px`);
   
-      if (targetElement) {
-        const navbarHeight = 75; // Ajustez cela si nécessaire
-        const offset = navbarHeight;
-  
-        targetElement.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-  
-        window.scrollBy(0, -offset);
-      }
+      // Effectuer le défilement
+      window.scrollTo({
+        top: targetScrollPosition,  // Défilement jusqu'à la position ajustée
+        behavior: "smooth",  // Défilement fluide
+      });
     } else {
-      console.log(`Route ${location.pathname} ne nécessite pas de défilement.`);
-    }
-  
-    if (burgerModalElem.current) {
-      burgerModalElem.current.classList.remove("active");
+      console.log(`Section ${arg} non trouvée.`);
     }
   };
+
+
 
   return (
     <div className="app">
@@ -137,13 +124,18 @@ function App() {
                     projectsWrapperElem={projectsWrapperElem}
                     contactWrapperElem={contactWrapperElem}
                     skillsWrapperElem={skillsWrapperElem}
+                    navbarLinkProjects={navbarLinkProjects}
+                    navbarLinkContact={navbarLinkContact}
+                    navigateTo={navigateTo} 
                   />
                 }
             
               />
               <Route
                 path="/projets/:project"
-                element={<ProjectReader />}
+                element={<ProjectReader
+                  navigateTo={navigateTo} 
+                />}
           
               />
             </Routes>

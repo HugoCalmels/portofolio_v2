@@ -225,8 +225,8 @@
   gap: 50px; /* ajustez l'espacement entre les cartes */
 
   margin-bottom: 100px;
-  margin-top: 50px;
 
+  padding:30px;
   align-items: start;
   @media (max-width: 800px) {
     grid-template-columns: repeat(1, 1fr);
@@ -243,22 +243,23 @@
 display: flex;
 flex-direction: column;
 border-radius: 6px;
-border: 2px solid $purple_op;
-padding: 20px;
+
+
 transition: .15s;
 cursor: pointer;
 display: block;
+background-color:#FCF3F5;
+z-index:7;
+box-shadow: 
+0 0 10px #495aae, 
+; /* Ombre ultra intense */
+
 @media (max-width: 500px) {
   padding: 10px;
 }
 
 }
 
-
-.projects-card:hover{
-  border: 2px solid rgba(32,46,115,.9);
-  transform: scale(1.025);
-}
 
 
 
@@ -286,12 +287,12 @@ display: block;
 
 .projects-card-title h5{
 margin : 0;
-font-family: "Montserrat";
+font-family: "Montserrat", sans-serif;
 font-size: 1.75rem;
 font-weight: 700;
     margin: 0;
     margin-bottom: 15px;
-    color: #283044;
+    color: #3a3d45;
     float: left;
     direction: ltr;
 }
@@ -310,3 +311,137 @@ font-weight: 700;
 
 
 
+////
+
+
+.projects-main-title h2 {
+  position: relative;
+  z-index: 10;
+  margin: 0;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight:600;
+  color: #090b11;
+
+  text-align: center;
+  display: inline;
+
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  @media (max-width: 800px) {
+    font-size: 35px;
+  }
+}
+.projects-main-title h2::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+
+  width: 90%;
+  height: 20px; /* Hauteur de la ligne */
+  background-color: #495aae; /* Couleur de la ligne */
+  z-index: -1; /* Pour que la ligne passe en dessous du texte */
+  transform: translateY(-25px); 
+  right:-30px;
+opacity: .5;
+}
+.projects-main-title{
+
+  display:flex;
+  justify-content: center;
+}
+
+//// 
+
+.projects-card-tags{
+
+}
+.projects-card-tags ul{
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+  display:flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.projects-card-tags li{
+  margin:0;
+  padding: 0;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #495aae;
+  padding:10px;
+  width: 65px;
+  gap:3px;
+}
+
+.project-icon{
+  color: #495aae;
+
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+.project-icon svg{
+  width: 35px;
+  height:35px;
+}
+
+.project-icon-title{
+color: #495aae;
+font-size: 0.75rem;
+
+}
+
+
+///// 
+.projects-card {
+  opacity: 0;
+  transform: translateX(-400px); /* Déplacer la carte loin à gauche */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Animation pour l'entrance */
+  will-change: transform, opacity;
+  position: relative;
+}
+
+/* Pour les cartes qui viennent de la droite (index impair) */
+.projects-card.right {
+  transform: translateX(400px); /* Déplacer la carte plus à droite */
+}
+
+/* Lorsque la carte devient visible, elle revient à sa position normale */
+.projects-card.visible {
+  opacity: 1;
+  transform: translateX(0); /* Remet la carte à sa position d'origine */
+  transition: transform 0.6s ease-out; /* Applique la transformation de manière fluide */
+}
+
+/* Le wrapper responsable de l'animation de scroll et du zoom au hover */
+.projects-card-wrapper {
+  display: block;
+  cursor: pointer;
+  background-color: #FCF3F5;
+  z-index: 7;
+  box-shadow: 0 0 10px #495aae; /* Ombre ultra intense */
+  border-radius: 6px;
+  padding: 20px;
+  transition: transform 0.15s ease-out; /* Animation rapide pour le zoom */
+}
+
+/* Animation au hover sur la carte extérieure (zoom rapide) */
+.projects-card-wrapper:hover {
+  transform: scale(1.025); /* Zoom sur la carte */
+  transition: transform 0.15s ease; /* Transition rapide pour le zoom */
+}
+
+/* Le conteneur 'inner' est responsable des animations de scroll */
+.projects-card-inner {
+  transition: transform 0.6s ease-out; /* Animation fluide pour le scroll */
+}

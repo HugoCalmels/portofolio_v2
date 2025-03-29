@@ -1,79 +1,122 @@
 import "./Index.scss";
 import Home from "./sections/home/Home";
 import Skills from "./sections/skills/Skills";
+import Services from "./sections/services/Services";
 import Projects from "./sections/projects/Projects";
 import Contact from "./sections/contact/Contact";
-import img from "../../src/assets/images/backgroundThree.png";
+import Presentation from "./sections/presentation/Presentation"; // importation de la section Presentation
 import { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
+
 const Index = (props) => {
   const [projectsHeight, setProjectsHeight] = useState(0);
   const [bgWrapperTop, setBgWrapperTop] = useState(0);
+  const [skillsBgTop, setSkillsBgTop] = useState(0);
+  const [skillsHeight, setSkillsHeight] = useState(0);
+  const [servicesBgTop, setServicesBgTop] = useState(0);
+  const [servicesHeight, setServicesHeight] = useState(0);
+  const [presentationBgTop, setPresentationBgTop] = useState(0); // état pour la section Présentation
+  const [presentationHeight, setPresentationHeight] = useState(0); // état pour la hauteur de la section Présentation
   const location = useLocation();
   const homeRef = useRef(null);
+  const presentationRef = useRef(null); // référence pour la section Présentation
   const skillsRef = useRef(null);
+  const servicesRef = useRef(null);
+  const canvasRef = useRef(null);
 
-  const NAVBAR_HEIGHT = 75; // Fixed navbar height
-
-  // Function to update the height based on the Projects section
   const handleHeightChange = (height) => {
     setProjectsHeight(height);
   };
 
-  // Function to calculate the top offset of .projects-bg-wrapper
   const calculateBgWrapperTop = () => {
-    if (homeRef.current && skillsRef.current) {
+    if (homeRef.current && presentationRef.current && skillsRef.current && servicesRef.current) {
       const homeHeight = homeRef.current.offsetHeight || 0;
+      const presentationHeight = presentationRef.current.offsetHeight || 0; // hauteur de la section Présentation
       const skillsHeight = skillsRef.current.offsetHeight || 0;
-      const newTop = homeHeight + skillsHeight + NAVBAR_HEIGHT; // Adjust with navbar height
-      setBgWrapperTop(newTop);
+      const servicesHeight = servicesRef.current.offsetHeight || 0;
+
+      console.log("Home Height: ", homeHeight);
+      console.log("Presentation Height: ", presentationHeight); // log pour la présentation
+      console.log("Skills Height: ", skillsHeight);
+      console.log("Services Height: ", servicesHeight);
+
+      // Calcul des positions de fond en tenant compte de la section Présentation
+      setBgWrapperTop(homeHeight + presentationHeight + skillsHeight + servicesHeight);
+      setPresentationBgTop(homeHeight);
+      setSkillsBgTop(homeHeight + presentationHeight);
+      setSkillsHeight(skillsHeight);
+      setServicesBgTop(homeHeight + presentationHeight + skillsHeight);
+      setServicesHeight(servicesHeight);
     }
   };
 
   useEffect(() => {
-    // Calculer la position après le chargement complet de la page
     const handleLoad = () => {
       calculateBgWrapperTop();
     };
 
-    // Observer les changements de taille
     const observer = new ResizeObserver(() => {
       calculateBgWrapperTop();
     });
 
-    if (homeRef.current) observer.observe(homeRef.current);
-    if (skillsRef.current) observer.observe(skillsRef.current);
-
-    // Exécuter le calcul après le chargement complet de la page
     window.addEventListener("load", handleLoad);
-
-    // Réagir au changement de la taille de la fenêtre
     window.addEventListener("resize", calculateBgWrapperTop);
+
+    if (homeRef.current) observer.observe(homeRef.current);
+    if (presentationRef.current) observer.observe(presentationRef.current); // observation de la section Présentation
+    if (skillsRef.current) observer.observe(skillsRef.current);
+    if (servicesRef.current) observer.observe(servicesRef.current);
 
     return () => {
       window.removeEventListener("load", handleLoad);
       window.removeEventListener("resize", calculateBgWrapperTop);
       if (homeRef.current) observer.unobserve(homeRef.current);
+      if (presentationRef.current) observer.unobserve(presentationRef.current); // désabonnement de la section Présentation
       if (skillsRef.current) observer.unobserve(skillsRef.current);
+      if (servicesRef.current) observer.unobserve(servicesRef.current);
     };
   }, [location.pathname]);
 
+  // anims //
+ 
+
   return (
     <div className="main-default">
-      <div className="homepage-background-image">
-        <img src={img} alt="background" />
-      </div>
-      <Home homeWrapperElem={homeRef} />
-      <div className="skills-gradiant"></div>
-      <Skills skillsWrapperElem={skillsRef} />
 
-      {/* Background wrapper with dynamic top position and height */}
+      <Home
+        homeWrapperElem={homeRef}
+        navbarLinkProjects={props.navbarLinkProjects}
+        navbarLinkContact={props.navbarLinkContact}
+        navigateTo={props.navigateTo} 
+      />
+      <Presentation presentationWrapperElem={presentationRef} /> {/* Section Présentation */}
+      <Skills skillsWrapperElem={skillsRef} />
+      <Services servicesWrapperElem={servicesRef} />
+
+      {/* Background pour la section Présentation */}
+      <div
+        className="presentation-bg-wrapper"
+        style={{ top: `${presentationBgTop}px`, height: `${presentationHeight}px` }}
+      ></div>
+
+      {/* Background pour la section Skills */}
+      <div
+        className="skills-bg-wrapper"
+        style={{ top: `${skillsBgTop}px`, height: `${skillsHeight}px` }}
+      ></div>
+
+      {/* Background pour la section Services */}
+      <div
+        className="services-bg-wrapper"
+        style={{ top: `${servicesBgTop}px`, height: `${servicesHeight}px` }}
+      ></div>
+
+      {/* Background pour la section Projects */}
       <div
         className="projects-bg-wrapper"
         style={{ top: `${bgWrapperTop}px`, height: `${projectsHeight}px` }}
       ></div>
 
-      {/* Projects section with a ref and height change callback */}
       <Projects
         projectsWrapperElem={props.projectsWrapperElem}
         onHeightChange={handleHeightChange}
