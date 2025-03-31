@@ -45,8 +45,18 @@ const Navbar = (props) => {
       <div className="navbar-burger-menu-modal" ref={burgerModalElem}>
         <ul>
           <li>
-            <a className="nav-burger-link" onClick={() => handleClick("skills")}>
+            <a className="nav-burger-link" onClick={() => handleClick("presentation")}>
               Présentation
+            </a>
+          </li>
+          <li>
+            <a className="nav-burger-link" onClick={() => handleClick("skills")}>
+              Compétences
+            </a>
+          </li>
+          <li>
+            <a className="nav-burger-link" onClick={() => handleClick("services")}>
+              Services
             </a>
           </li>
           <li>
@@ -59,6 +69,7 @@ const Navbar = (props) => {
               Contact
             </a>
           </li>
+          <ul className="burger-rs"><p>Réseaux</p>
           <li>
             <a className="nav-burger-link" href="https://www.linkedin.com/in/hugo-calmels/" target="_blank" rel="noopener noreferrer">
               LinkedIn
@@ -74,6 +85,7 @@ const Navbar = (props) => {
               Gitlab
             </a>
           </li>
+          </ul>
         </ul>
       </div>
 

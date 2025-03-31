@@ -260,36 +260,44 @@
 
 .navbar-burger-menu-modal {
   position: fixed;
-  z-index: 10;
+  z-index: 20;
   left: 0;
   right: 0;
 
-  bottom: 0;
-
-  background-color: $new_white2;
-  top: 75px;
+  top: 50px;
   transform: translateY(-100vh);
   transition: 0.3s;
   overflow: hidden;
   padding: 15px 15px;
+  background-color: #DDDDF4;
+  padding:30px 0;
+  display:flex;
+  align-items: center;
+  border-bottom: 4px solid #495aae;
 }
 .navbar-burger-menu-modal.active {
   transform: translateY(0px);
 }
 .navbar-burger-menu-modal ul {
+  
   margin: 0;
-  margin-top: 15px;
   padding: 0;
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   align-items :center;
+ 
+  align-items: start;
+  margin-left: 20px;
 }
+
 .nav-burger-link {
-  color: black;
-  font-size: 16px;
-  font-weight: 300;
+  font-weight: 600;
+  font-size: .9rem;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  color: #090b11;
   text-decoration: none;
   position: relative;
   cursor: pointer;
@@ -308,6 +316,24 @@
     display: none;
   }
 
+}
+.burger-rs{
+  margin: 0 !important;
+  padding:0;
+
+}
+.burger-rs p{
+  font-weight: 600;
+  font-size: .9rem;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  color: #090b11;
+  text-decoration: none;
+  position: relative;
+  margin: 0;
+}
+.burger-rs li{
+  margin-left: 20px;
 }
 .nbi-logo{
 
@@ -364,3 +390,4 @@
 .nml-link-second-page:hover::before {
   width: 100%;
 }
+
