@@ -598,6 +598,7 @@ height: 40px;
   display:flex;
   flex-direction: row;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .project-reader-features-list h4{
