@@ -26,7 +26,7 @@ const Presentation = (props) => {
           <li><strong>Code Review</strong> et bonnes pratiques de développement</li><br/>
           <li><strong>Gestion des conflits Git</strong> et travail collaboratif</li><br/>
           <li><strong>Architecture logicielle</strong> (clean architecture, REST APIs…)</li><br/>
-          <li><strong>Développement Full-Stack</strong> (Java/Spring côté back, Angular côté front)</li>
+          <li><strong>Développement Full-Stack</strong> (Java/Spring côté back, Angular/React côté front)</li>
         </ul>
         <p>
           Aujourd’hui, je suis capable de <strong>travailler aussi bien en Back qu’en Front</strong>, et j’ai une forte autonomie qui me permet de m’adapter rapidement à de nouveaux environnements.
