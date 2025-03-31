@@ -99,6 +99,9 @@
   @media (max-width: 500px) {
     text-align: center;
   }
+  @media (max-width: 500px) {
+    margin-bottom: 30px;
+  }
 }
 .project-website-link-container{
   display:flex;
@@ -109,6 +112,9 @@
   bottom: 50%;
   @media (max-width: 700px) {
     position: relative;
+  }
+  @media (max-width: 500px) {
+    margin-bottom: 50px;
   }
 }
 .project-website-link{

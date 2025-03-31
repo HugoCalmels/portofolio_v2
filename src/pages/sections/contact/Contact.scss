@@ -11,9 +11,10 @@ max-width: 1500px;
   scroll-margin-top: 75px;
   margin:auto;
   margin-bottom: 150px;
-  @media (max-width: 350px) {
+  @media (max-width: 500px) {
 
     margin-bottom: 30px;
+
   }
 }
 
@@ -88,8 +89,8 @@ color: inherit;
   padding-bottom: 20px;
   margin-bottom: 10px;
 
-  @media (max-width: 800px) {
-    font-size: 35px;
+  @media (max-width: 500px) {
+    font-size: 2rem;
   }
 }
 
