@@ -11,7 +11,7 @@ const Home = (props) => {
         navigateTo={props.navigateTo} 
       />
       <div className="home-testimonials">
-        <h5>Recommandations</h5>
+
         <div className="ht-body">
 
           <div className="ht-unit">
