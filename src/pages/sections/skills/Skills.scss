@@ -313,7 +313,6 @@ opacity: .25;
   flex-direction: column;
   gap: 60px;
   margin-top: 30px;
-  margin-left: 30px;
 
   padding-bottom: 150px;
   //border-bottom: 4px solid #495aae;
@@ -347,6 +346,8 @@ opacity: .25;
   display:flex;
   flex-direction: row;
   gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .competences h4{
