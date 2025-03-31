@@ -71,6 +71,9 @@
   @media (max-width: 800px) {
     font-size: 35px;
   }
+  @media (max-width: 400px) {
+    font-size: 2rem;
+  }
 }
 .skills-wrapper h2::before {
   content: '';
@@ -314,7 +317,7 @@ opacity: .25;
   gap: 60px;
   margin-top: 30px;
 
-  padding-bottom: 150px;
+  padding-bottom: 100px;
   //border-bottom: 4px solid #495aae;
   align-items: center;
 }

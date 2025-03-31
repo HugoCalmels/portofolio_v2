@@ -24,6 +24,9 @@
   @media (max-width: 800px) {
     font-size: 35px;
   }
+  @media (max-width: 500px) {
+    font-size: 2rem;
+  }
 }
 .services-main-title h2::before {
   content: '';
@@ -53,6 +56,9 @@ opacity: .5;
 
   z-index:6;
   background-color: #FCF3F5;
+  @media (max-width: 500px) {
+    padding:30px 20px;
+  }
 }
 
 .service{
@@ -66,7 +72,9 @@ opacity: .5;
   font-size: 1.5rem;
   margin:0;
   padding:0;
-
+  @media (max-width: 500px) {
+    font-size: 1.3rem;
+  }
 }
 .service p{
   font-family: "Montserrat", sans-serif;
@@ -76,4 +84,7 @@ opacity: .5;
   margin:0;
   padding:0;
   margin:5px;
+  @media (max-width: 500px) {
+    font-size: 1.1rem;
+  }
 }
