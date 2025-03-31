@@ -78,7 +78,10 @@
   padding: 0 30px;
   padding-bottom: 30px;
   border-bottom: 4px solid #495aae;
-
+  @media (max-width: 600px) {
+    padding: 0 15px;
+    padding-bottom: 30px;
+  }
 }
 .hero-content-title {
   position: relative;
