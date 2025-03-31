@@ -177,6 +177,12 @@ display:flex;
     margin-top: 75px;
     margin-bottom: 35px;
   }
+  @media (max-width: 500px) {
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
 }
 .btn-custom{
   border:4px solid #090b11;;
@@ -191,6 +197,7 @@ display:flex;
   font-family: 'Montserrat', sans-serif;
   transition: .1s;
   cursor: pointer;
+  max-width: 200px ;
 }
 .btn-custom:hover{
   transform: scale(1.025);
