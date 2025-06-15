@@ -26,8 +26,11 @@ const ProjectReader = (props) => {
   const navigate = useNavigate();
   const { project } = useParams();
 
+  console.log("[ProjectReader] Param 'project' =", project);
+
   // Essaie de trouver localement
   const localProject = ProjectsList.find((el) => el.ref === project);
+  console.log("[ProjectReader] localProject trouvé ?", localProject);
 
   // State pour le projet (local ou fetché)
   const [foundProject, setFoundProject] = useState(localProject);
@@ -35,26 +38,31 @@ const ProjectReader = (props) => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
+    console.log("[ProjectReader][useEffect] Début fetch ou localProject check");
     if (!localProject) {
+      console.log("[ProjectReader] Aucun localProject, lancement fetch...");
       setLoading(true);
-      // Simulation d'un fetch d'un projet par ref
       fetch(`/api/projects/${project}`)
         .then((res) => {
+          console.log("[ProjectReader][fetch] Response status:", res.status);
           if (!res.ok) throw new Error("Projet non trouvé");
           return res.json();
         })
         .then((data) => {
+          console.log("[ProjectReader][fetch] Projet reçu :", data);
           setFoundProject(data);
           setError(false);
         })
-        .catch(() => {
+        .catch((err) => {
+          console.error("[ProjectReader][fetch] Erreur:", err);
           setError(true);
         })
         .finally(() => {
+          console.log("[ProjectReader][fetch] Fin du fetch");
           setLoading(false);
         });
     } else {
-      // Si on a localProject, on met à jour state en conséquence
+      console.log("[ProjectReader] localProject trouvé, mise à jour state");
       setFoundProject(localProject);
       setError(false);
       setLoading(false);
@@ -62,25 +70,35 @@ const ProjectReader = (props) => {
   }, [project, localProject]);
 
   if (loading) {
+    console.log("[ProjectReader] Loading...");
     return <div>Chargement du projet...</div>;
   }
 
   if (error || !foundProject) {
+    console.log("[ProjectReader] Error ou projet introuvable");
     return (
       <div>
         <h2>Projet non trouvé</h2>
         <p>Le projet demandé n'existe pas ou l'URL est incorrecte.</p>
-        <button onClick={() => navigate("/")}>Retour à l'accueil</button>
+        <button
+          onClick={() => {
+            console.log("[ProjectReader] Retour à l'accueil via bouton");
+            navigate("/");
+          }}
+        >
+          Retour à l'accueil
+        </button>
       </div>
     );
   }
 
-
   useEffect(() => {
+    console.log("[ProjectReader][useEffect] Scroll to top pour project", project);
     window.scrollTo(0, 0);
-  }, [project]); 
+  }, [project]);
 
   const handleBackClick = () => {
+    console.log("[ProjectReader] handleBackClick appelé");
     navigate(-1);
   };
 
