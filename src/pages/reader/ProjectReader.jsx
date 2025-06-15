@@ -24,15 +24,56 @@ import { SiVite } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
 const ProjectReader = (props) => {
   const navigate = useNavigate();
-  const location = useLocation();
-  const ImagesReaderRef = useRef(null);
   const { project } = useParams();
 
-  const [selectedImage, setSelectedImage] = useState("");
-  const foundProject = ProjectsList.find((el) => el.ref === project);
+  // Essaie de trouver localement
+  const localProject = ProjectsList.find((el) => el.ref === project);
 
-  console.log(foundProject)
+  // State pour le projet (local ou fetché)
+  const [foundProject, setFoundProject] = useState(localProject);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
+  useEffect(() => {
+    if (!localProject) {
+      setLoading(true);
+      // Simulation d'un fetch d'un projet par ref
+      fetch(`/api/projects/${project}`)
+        .then((res) => {
+          if (!res.ok) throw new Error("Projet non trouvé");
+          return res.json();
+        })
+        .then((data) => {
+          setFoundProject(data);
+          setError(false);
+        })
+        .catch(() => {
+          setError(true);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    } else {
+      // Si on a localProject, on met à jour state en conséquence
+      setFoundProject(localProject);
+      setError(false);
+      setLoading(false);
+    }
+  }, [project, localProject]);
+
+  if (loading) {
+    return <div>Chargement du projet...</div>;
+  }
+
+  if (error || !foundProject) {
+    return (
+      <div>
+        <h2>Projet non trouvé</h2>
+        <p>Le projet demandé n'existe pas ou l'URL est incorrecte.</p>
+        <button onClick={() => navigate("/")}>Retour à l'accueil</button>
+      </div>
+    );
+  }
 
 
   useEffect(() => {
