@@ -230,6 +230,10 @@
 
   padding:30px;
   align-items: start;
+
+margin-left:auto;
+margin-right:auto;
+  max-width: 1500px;
   @media (max-width: 800px) {
     grid-template-columns: repeat(1, 1fr);
     margin-top: 30px;
@@ -240,6 +244,7 @@
   }
   
 }
+
 .projects-card{
 
   width: 100%; 
@@ -302,7 +307,7 @@ font-weight: 700;
 
 .projects-card p{
  margin: 0;
- padding: 10px 0;
+ padding: 20px 0;
  direction: ltr;
  color: #6474a2;
     line-height: 1.5;
@@ -455,4 +460,9 @@ font-size: 0.75rem;
     transform: translateX(0) !important;
     transition: none !important;
   }
+}
+
+.card-p{
+
+
 }

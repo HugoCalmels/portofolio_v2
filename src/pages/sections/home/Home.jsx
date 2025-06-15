@@ -42,7 +42,7 @@ const Home = (props) => {
               </div>
               <div className="ht-header-content">
                 <p><strong>Arthur Mollet</strong></p>
-                <p>Dev Expérimenté</p>
+                <p>Devéveloppeur Senior</p>
               </div>
             </div>
 

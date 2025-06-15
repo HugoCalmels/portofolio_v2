@@ -120,7 +120,7 @@ import { useInView } from "react-intersection-observer"; // Assure-toi d'avoir c
                       <img src={project.image} alt="project image" />
                     </div>
   
-                    <p dangerouslySetInnerHTML={{ __html: project.shortDescription }}></p>
+                    <p dangerouslySetInnerHTML={{ __html: project.shortDescription }} className="card-p"></p>
   
                     <div className="projects-card-tags">
                       <ul>
