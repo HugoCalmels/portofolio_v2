@@ -11,41 +11,28 @@ const Presentation = (props) => {
         <h2>Présentation</h2>
       </div>
       <div className="presentation-body">
+      <p>
+  Développeur fullstack spécialisé en <strong>Java/Spring</strong> côté back, <strong>React/Angular</strong> côté front.  
+  Je conçois des applications web et mobiles, de l’interface jusqu’à la mise en ligne, incluant le déploiement sur des plateformes cloud comme Heroku ou Netlify, ou sur des serveurs VPS avec <strong>pipelines CI/CD</strong>.
+</p>
+
+<h6>Mon parcours</h6> <p><strong>Bootcamp :</strong> 6 mois intensifs pour apprendre React et Ruby on Rails. Formation complète pour poser des bases solides, front-end comme back-end.</p> <p><strong>Autodidacte :</strong> environ 2 ans à progresser sur des projets personnels et collaboratifs en Ruby et React, avec un travail régulier et sérieux.</p> <p><strong>Mentorat :</strong> 1 an accompagné par un développeur senior sur un projet Java/Spring/Angular. Cette expérience a permis de structurer ma méthode et d’intégrer les bonnes pratiques professionnelles.</p> <ul> <li><strong>Code review et bonnes pratiques de développement</strong></li><br/> <li><strong>Gestion des conflits Git et travail en équipe</strong></li><br/> <li><strong>Architecture logicielle</strong> (REST APIs, clean architecture, etc.)</li><br/> </ul>
+        <h6>Pour les pros</h6>
         <p>
-          Développeur Web Full-Stack spécialisé en <strong>Java/Spring</strong> et <strong>Angular/React</strong>, je recherche une première expérience où je pourrai mettre en pratique mes compétences et continuer à progresser.
+          Disponible pour un <strong>CDI</strong> ou un <strong>CDD</strong>. Je m’adapte aux environnements existants, et je monte vite en compétence sur les projets en place. 
+          Autonome, rigoureux, et capable de livrer.
         </p>
 
-        <h6>Mon parcours</h6>
+        <h6>Pour les particuliers & petites structures</h6>
         <p>
-          Après une <strong>formation intensive certifiante</strong>, j’ai poursuivi mon apprentissage en autodidacte pendant <strong>2 ans</strong>, en travaillant sur des projets concrets et en approfondissant mes connaissances.
+          Vous avez besoin d’un <strong>site vitrine</strong>, d’une <strong>application web ou mobile</strong>, ou d’un <strong>outil sur-mesure</strong> ? 
+          Je peux tout gérer, de l’idée jusqu’à la mise en ligne, avec un budget clair et un suivi simple.
         </p>
         <p>
-          J’ai ensuite eu la chance d’être <strong>mentoré pendant 1 an</strong> par un développeur expérimenté sur un projet en <strong>Java/Spring/Angular</strong>. Grâce à ce mentorat, j’ai acquis une véritable méthodologie de travail : 
-        </p>
-        <ul>
-          <li><strong>Code Review</strong> et bonnes pratiques de développement</li><br/>
-          <li><strong>Gestion des conflits Git</strong> et travail collaboratif</li><br/>
-          <li><strong>Architecture logicielle</strong> (clean architecture, REST APIs…)</li><br/>
-          <li><strong>Développement Full-Stack</strong> (Java/Spring côté back, Angular/React côté front)</li>
-        </ul>
-        <p>
-          Aujourd’hui, je suis capable de <strong>travailler aussi bien en Back qu’en Front</strong>, et j’ai une forte autonomie qui me permet de m’adapter rapidement à de nouveaux environnements.
+          Pas besoin de jargon. On discute de votre besoin, je vous propose une solution concrète.
         </p>
 
-        <h6>Ce que je recherche</h6>
-        <p>
-          <strong>Peu importe le projet, Back ou Front</strong>, je m’adapte. Mon objectif est de monter en compétences et d’apporter de la valeur à l’entreprise qui me fera confiance.
-        </p>
-        <p>
-          Je suis aussi ouvert aux <strong>missions freelance</strong>, alors si vous avez un besoin, n’hésitez pas à me contacter !
-        </p>
-
-        <h6>En dehors du code</h6>
-        <p>
-          Passionné de <strong>randonnée</strong> dans les Pyrénées et amateur de <strong>jeux vidéo sur PC</strong>, je suis toujours curieux d’explorer de nouveaux défis, que ce soit en développement ou ailleurs !
-        </p>
-
-        <p><strong>Si mon profil vous intéresse, contactez-moi !</strong></p>
+        <p><strong>Contactez-moi si vous cherchez un dev sérieux et adaptable.</strong></p>
       </div>
     </section>
   );

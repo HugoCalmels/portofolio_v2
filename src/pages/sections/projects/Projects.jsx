@@ -88,7 +88,7 @@ import { useInView } from "react-intersection-observer"; // Assure-toi d'avoir c
           {ProjectsList.map((project, index) => {
             const { ref, inView } = useInView({
               triggerOnce: false,
-              threshold: 0.10, // L'animation se lance quand l'élément devient visible à 10%
+              threshold: 0.2, // L'animation se lance quand l'élément devient visible à 10%
             });
   
             // On alterne les classes "left" et "right" pour chaque carte

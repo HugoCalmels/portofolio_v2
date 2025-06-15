@@ -1,5 +1,6 @@
 import "./Services.scss";
-import figma from "../../../assets/images/ffigma2.png";
+import figma from "../../../assets/images/ffigma4.png";
+import { svgLogoList } from "../../../components/SvgLogoList";
 
 const Services = (props) => {
   return (
@@ -9,43 +10,90 @@ const Services = (props) => {
       ref={props.servicesWrapperElem}
     >
       <div className="services-main-title">
-      <h2>Services</h2>
+        <h2>Services</h2>
       </div>
 
       <div className="services-body">
-        <div className="service creation">
-          <h4>Création et Développement 🛠️</h4>
-          <p>✔ Maquettage & Design (Wireframes, prototypes Figma)</p>
-          <p>✔ Développement Front-End (UI responsive, animations, accessibilité, frameworks modernes)</p>
-          <p>✔ Développement Back-End (APIs REST, gestion des utilisateurs, logique métier)</p>
-          <p>✔ Mise en place d'une Base de Données (PostgreSQL, gestion des performances, migrations)</p>
-        </div>
-        <div className="service creation">
-          <h4> Optimisation et Performance 🚀</h4>
-          <p>✔ Optimisation des performances web (chargement rapide, optimisations images, lazy loading, Lighthouse)</p>
-          <p>✔ Déploiement & Référencement (SEO, sitemap, indexation Google)</p>
-        </div>
-        <div className="service creation">
-          <h4> Sécurité, Connexions & Intégrations 🔐</h4>
-          <p>✔ Authentification & Sécurité (JWT-tokens, refresh tokens, http-only cookies)</p>
-          <p>✔ Intégration d’API & Services Externes (Stripe, Google Maps, Google Calendar, Google OAuth, OpenID, Gmail SMTP)</p>
-          <p>✔ Connexion avec d’autres API (services météo, transport, finance, etc.)</p>
-        </div>
+        <div className="service-inter-container">
 
-        
+          <div className="service creation">
+            <div className="service-logo-container">
+              {svgLogoList.pencil} 
+            </div>
+            <div className="service-body">
+              <h4>Maquettes & Prototypage</h4>
+              <p>✔ Conception d’interfaces (mobile & desktop)</p>
+              <p>✔ Wireframes & prototypes interactifs (Figma)</p>
+              <p>✔ Itérations visuelles avant dev</p>
+            </div>
+          </div>
+
+          <div className="service creation">
+            <div className="service-logo-container">
+             {svgLogoList.monitor} 
+            </div>
+            <div className="service-body">
+              <h4>Front-End</h4>
+              <p>✔ Interfaces responsives et animées</p>
+              <p>✔ Accessibilité, performance, UX</p>
+              <p>✔ Frameworks modernes</p>
+            </div>
+          </div>
+
+          <div className="service creation">
+            <div className="service-logo-container">
+              {svgLogoList.database} 
+            </div>
+            <div className="service-body">
+              <h4>Back-End</h4>
+              <p>✔ APIs REST & logique métier</p>
+              <p>✔ Gestion des utilisateurs & rôles</p>
+              <p>✔ Base de données (PostgreSQL, migrations)</p>
+            </div>
+          </div>
+
+          <div className="service creation">
+            <div className="service-logo-container">
+              {svgLogoList.google}
+            </div>
+            <div className="service-body">
+              <h4>Connexions & Services</h4>
+              <p>✔ Intégration API (Stripe, Google, etc.)</p>
+              <p>✔ Services tiers (cartes, météo, mail, calendrier, paiement)</p>
+            </div>
+          </div>
+
+          <div className="service creation">
+            <div className="service-logo-container">
+              {svgLogoList.cloud} 
+            </div>
+            <div className="service-body">
+              <h4>Déploiement & Hosting</h4>
+              <p>✔ CI/CD (déploiement continu)</p>
+              <p>✔ Hébergement (Heroku, VPS, nom de domaine)</p>
+            </div>
+          </div>
+
+          <div className="service creation">
+            <div className="service-logo-container">
+      {svgLogoList.stats}
+            </div>
+            <div className="service-body">
+              <h4>SEO & Suivi</h4>
+              <p>✔ Référencement (SEO, sitemap, indexation)</p>
+              <p>✔ Google Analytics, outils de tracking</p>
+            </div>
+          </div>
+
+        </div>
       </div>
+
       <div className="services-exemples">
         <h4>Exemple de maquette (mobile app)</h4>
-      <img src={figma} alt="Figma logo" className="my-image" />
-</div>
-
-
-
-
+        <img src={figma} alt="Figma logo" className="my-image" />
+      </div>
     </section>
-  )
-}
+  );
+};
 
 export default Services;
-
-

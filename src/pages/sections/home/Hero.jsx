@@ -32,10 +32,10 @@ const Hero = (props) => {
                 <h1>Hugo Calmels</h1>
               </div>
               <div className="hero-content-text">
-                <h3>Développeur Full Stack</h3>
-                <p>Je conçois des applications ou des sites web et mobile.</p>
-                <p>➔ Je recherche actuellement ma première expérience en entreprise.</p>
-                <p>➔ Je peux coder votre site ou votre application.</p>
+  <h3>Développeur Full Stack</h3>
+  <p>Création de sites et applis web</p>
+<p>➔ Ouvert à collaborer</p>
+<p>➔ Disponible rapidement</p>
               </div>
             </div>
             
