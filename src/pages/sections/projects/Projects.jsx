@@ -88,7 +88,7 @@ import { useInView } from "react-intersection-observer"; // Assure-toi d'avoir c
           {ProjectsList.map((project, index) => {
             const { ref, inView } = useInView({
               triggerOnce: false,
-              threshold: 0.1, // L'animation se lance quand l'élément devient visible à 10%
+              threshold: 0.10, // L'animation se lance quand l'élément devient visible à 10%
             });
   
             // On alterne les classes "left" et "right" pour chaque carte
@@ -107,7 +107,7 @@ import { useInView } from "react-intersection-observer"; // Assure-toi d'avoir c
                 <div
                   className="projects-card-wrapper"
                   style={{
-                    transform: hoveredCards[index] ? 'scale(1.025)' : 'scale(1)', // Appliquer le zoom uniquement si la carte est survolée
+                    transform: hoveredCards[index] ? 'scale(1.010)' : 'scale(1)', // Appliquer le zoom uniquement si la carte est survolée
                     transition: 'transform 0.15s ease', // Transition rapide au zoom
                   }}
                 >

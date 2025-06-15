@@ -261,10 +261,7 @@ cursor: pointer;
 display: block;
 background-color:#FCF3F5;
 z-index:7;
-box-shadow: 
-0 0 10px #495aae, 
-; /* Ombre ultra intense */
-
+box-shadow: 0 0 2px #495aae; 
 
 }
 
@@ -429,7 +426,7 @@ font-size: 0.75rem;
 .projects-card.visible {
   opacity: 1;
   transform: translateX(0); /* Remet la carte à sa position d'origine */
-  transition: transform 0.6s ease-out; /* Applique la transformation de manière fluide */
+  transition: transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Le wrapper responsable de l'animation de scroll et du zoom au hover */
@@ -438,16 +435,18 @@ font-size: 0.75rem;
   cursor: pointer;
   background-color: #FCF3F5;
   z-index: 7;
-  box-shadow: 0 0 10px #495aae; /* Ombre ultra intense */
+ 
   border-radius: 6px;
   padding: 20px;
   transition: transform 0.15s ease-out; /* Animation rapide pour le zoom */
+  box-shadow: 0 0 0px #495aae; /* Ombre ultra intense */
 }
 
 /* Animation au hover sur la carte extérieure (zoom rapide) */
 .projects-card-wrapper:hover {
-  transform: scale(1.025); /* Zoom sur la carte */
-  transition: transform 0.15s ease; /* Transition rapide pour le zoom */
+  transform: scale(1.005); /* Zoom sur la carte */
+  transition: transform 3s ease; /* Transition rapide pour le zoom */
+  box-shadow: 0 0 6px #495aae; /* Ombre ultra intense */
 }
 
 /* Le conteneur 'inner' est responsable des animations de scroll */

@@ -1,4 +1,5 @@
 import "./Services.scss";
+import figma from "../../../assets/images/ffigma2.png";
 
 const Services = (props) => {
   return (
@@ -30,7 +31,14 @@ const Services = (props) => {
           <p>✔ Intégration d’API & Services Externes (Stripe, Google Maps, Google Calendar, Google OAuth, OpenID, Gmail SMTP)</p>
           <p>✔ Connexion avec d’autres API (services météo, transport, finance, etc.)</p>
         </div>
+
+        
       </div>
+      <div className="services-exemples">
+        <h4>Exemple de maquette (mobile app)</h4>
+      <img src={figma} alt="Figma logo" className="my-image" />
+</div>
+
 
 
 

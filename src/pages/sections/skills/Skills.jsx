@@ -39,52 +39,63 @@ import { GrHeroku } from "react-icons/gr";
 import { SiIntellijidea } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { useInView } from "react-intersection-observer";
-const CompetencesBlock = ({ title, items }) => {
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const { ref, inView } = useInView({
-    threshold: 0.1, // Dès qu'une partie de l'élément est visible
-    triggerOnce: false, // Permet l'animation chaque fois que l'élément devient visible
-  });
+const CompetencesBlock = ({ title, items, isVisible }) => {
+  const [resetCounter, setResetCounter] = useState(0);
+  const [visibleState, setVisibleState] = useState(false);
 
   useEffect(() => {
-    if (inView) {
-      // Quand l'élément devient visible, on active l'animation
-      setHasAnimated(true);
+    if (isVisible) {
+      setVisibleState(true);
     } else {
-      // Quand l'élément sort de la vue, on réinitialise l'animation
-      setHasAnimated(false);
+      setVisibleState(false);
+      setResetCounter((c) => c + 1);
     }
-  }, [inView]); // Dépendance sur inView pour réagir au changement de visibilité
+  }, [isVisible]);
 
   return (
-    <div
-      ref={ref}
-      className={`competences ${hasAnimated ? "visible" : ""}`} // Applique "visible" selon l'état
-    >
+    <div className="competences">
       <h4>{title}</h4>
-      <div className="competences-wrapper">
-        {items.map((item, index) => (
-          <div key={index} className="competence-target">
-            {item.icon}
-            <div className="competence-title">{item.name}</div>
-          </div>
-        ))}
+      <div
+        key={`competences-wrapper-${resetCounter}`}
+        className="competences-wrapper"
+        style={{ display: "flex", gap: "20px" }}
+      >
+        {items.map((item, index) => {
+          const delay = (items.length - 1 - index) * 150; // inverse ordre d'apparition
+
+          return (
+            <div
+              key={index}
+              className={`competence-target ${visibleState ? "visible" : ""}`}
+              style={{
+                transitionDelay: `${delay}ms`,
+              }}
+            >
+              {item.icon}
+              <div className="competence-title">{item.name}</div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
 };
 
 const Skills = ({ skillsWrapperElem }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
+
   return (
     <section className="skills-wrapper" id="skills" ref={skillsWrapperElem}>
       <div className="competences-main-title">
         <h2>Compétences</h2>
       </div>
 
-      <div className="competences-container">
+      <div className="competences-container" ref={ref}>
         <CompetencesBlock
           title="Back End"
-          index={0} // Premier bloc (gauche)
           items={[
             { name: "Java", icon: <FaJava /> },
             { name: "Spring", icon: <SiSpring /> },
@@ -92,10 +103,10 @@ const Skills = ({ skillsWrapperElem }) => {
             { name: "Ruby", icon: <DiRuby /> },
             { name: "RoR", icon: <SiRubyonrails /> },
           ]}
+          isVisible={inView}
         />
         <CompetencesBlock
           title="Front End"
-          index={1} // Bloc du milieu (droite)
           items={[
             { name: "JavaScript", icon: <IoLogoJavascript /> },
             { name: "React", icon: <FaReact /> },
@@ -104,10 +115,10 @@ const Skills = ({ skillsWrapperElem }) => {
             { name: "NgRx", icon: <SiNgrx /> },
             { name: "Redux", icon: <SiRedux /> },
           ]}
+          isVisible={inView}
         />
         <CompetencesBlock
           title="Outils"
-          index={2} // Dernier bloc (gauche)
           items={[
             { name: "Git", icon: <FaGitAlt /> },
             { name: "Netlify", icon: <BiLogoNetlify /> },
@@ -118,6 +129,7 @@ const Skills = ({ skillsWrapperElem }) => {
             { name: "IntelliJ", icon: <SiIntellijidea /> },
             { name: "VSCode", icon: <VscVscode /> },
           ]}
+          isVisible={inView}
         />
       </div>
     </section>
