@@ -107,8 +107,8 @@ import { useInView } from "react-intersection-observer"; // Assure-toi d'avoir c
                 <div
                   className="projects-card-wrapper"
                   style={{
-                    transform: hoveredCards[index] ? 'scale(1.010)' : 'scale(1)', // Appliquer le zoom uniquement si la carte est survolée
-                    transition: 'transform 0.15s ease', // Transition rapide au zoom
+                    transform: hoveredCards[index] ? 'scale(1.01)' : 'scale(1)', // Appliquer le zoom uniquement si la carte est survolée
+                    transition: 'transform 0.225s ease', // Transition rapide au zoom
                   }}
                 >
                   {/* Conteneur 'inner' responsable des animations de scroll */}

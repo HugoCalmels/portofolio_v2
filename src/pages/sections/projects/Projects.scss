@@ -444,7 +444,7 @@ font-size: 0.75rem;
 
 /* Animation au hover sur la carte extérieure (zoom rapide) */
 .projects-card-wrapper:hover {
-  transform: scale(1.005); /* Zoom sur la carte */
+  transform: scale(1.01); /* Zoom sur la carte */
   transition: transform 3s ease; /* Transition rapide pour le zoom */
   box-shadow: 0 0 6px #495aae; /* Ombre ultra intense */
 }
