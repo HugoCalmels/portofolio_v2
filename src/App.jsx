@@ -6,15 +6,10 @@ import Index from "./pages/Index";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import ProjectReader from "./pages/reader/ProjectReader";
-import Loader from "./Loader";
 import { useEffect } from "react";
 import { SectionContext } from "./context/SectionContext";
-import ScrollToTop from "./ScrollToTop";
 
 function App() {
-  const loaderElem = useRef(null);
-
-  // Références aux éléments des sections
   const homeWrapperElem = useRef(null);
   const skillsWrapperElem = useRef(null);
   const projectsWrapperElem = useRef(null);
@@ -25,7 +20,6 @@ function App() {
   const navbarHomeSkills = useRef(null);
   const navbarLinkGithub = useRef(null);
 
-  // Tableau pour stocker les liens de la navbar
   const navLinkElems = [
     navbarLinkSkills,
     navbarLinkProjects,
@@ -36,10 +30,8 @@ function App() {
   const [section, setSection] = useState([]);
 
   useEffect(() => {
-    console.log("test app")
     const handleScroll = () => {
       let current = "";
-      // Récupérer les éléments des sections
       const sectionsElements = [
         homeWrapperElem.current,
         skillsWrapperElem.current,
@@ -68,36 +60,21 @@ function App() {
   }, []);
 
   const navigateTo = (arg) => {
-    console.log("trigger");
-    console.log(arg);
-
-  
-    // Hauteur de la navbar fixe à 50px
     const navbarHeight = 50;
-  
     const targetElement = document.querySelector(`#${arg}`);
-    console.log(targetElement);  // Vérifie si l'élément existe
   
     if (targetElement) {
-      // Position de l'élément cible par rapport à la page
       const targetPosition = targetElement.offsetTop;
-      console.log(`Position de l'élément par rapport au haut de la page : ${targetPosition}px`);
-  
-      // Calculer la position ajustée pour la navbar
       const targetScrollPosition = targetPosition - navbarHeight;
-      console.log(`Position après ajustement de la navbar : ${targetScrollPosition}px`);
-  
-      // Effectuer le défilement
+
       window.scrollTo({
-        top: targetScrollPosition,  // Défilement jusqu'à la position ajustée
-        behavior: "smooth",  // Défilement fluide
+        top: targetScrollPosition,  
+        behavior: "smooth",  
       });
     } else {
       console.log(`Section ${arg} non trouvée.`);
     }
   };
-
-
 
   return (
     <div className="app">
@@ -112,7 +89,11 @@ function App() {
             navbarHomeSkills={navbarHomeSkills}
             navigateTo={navigateTo} 
           />
-
+<div class="hero-curve-wrapper">
+  <div class="hero-curve-rect"></div>
+  <div class="hero-curve-circle"></div>
+          </div>
+          <div className="hero-square"></div>
           <main className="main-content">
          
             <Routes>

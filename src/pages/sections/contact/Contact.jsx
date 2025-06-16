@@ -1,16 +1,11 @@
 import "./Contact.scss";
 import { useState } from "react";
-import SmallStain from "../../../assets/svgs/SmallStain";
 import { FiUser } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsHouse } from "react-icons/bs";
-import { BsTelephone } from "react-icons/bs";
 import { RiMapPinLine } from "react-icons/ri";
 import { FaLinkedin, FaGithub, FaGitlab } from "react-icons/fa";
 const Contact = (props) => {
-  const btnStyle = { color: "white", width: "20px", height: "20px" };
-  const btnStyle2 = { color: "black", width: "20px", height: "20px" };
-
   const [alertMessage, setAlertMessage] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

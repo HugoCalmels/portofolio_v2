@@ -50,6 +50,7 @@
   overflow: hidden; /* Évite les débordements */
 
   padding: 0 30px;
+
   @media (max-width: 500px) {
     padding: 0px;
   }
@@ -62,6 +63,7 @@
   max-width: none !important; /* Supprime toute limite */
   object-fit: contain;
   max-width: 500px!important;
+
 }
 .hero-body {
 

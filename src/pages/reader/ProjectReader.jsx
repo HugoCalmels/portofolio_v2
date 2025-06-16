@@ -1,6 +1,6 @@
 import "./ProjectReader.scss";
-import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { ProjectsList } from "../../data/ProjectsList";
 
 import { FaReact, FaAngular, FaJava, FaAws } from "react-icons/fa";
@@ -11,8 +11,6 @@ import { IoLogoJavascript } from "react-icons/io5";
 
 const ProjectReader = () => {
   const { project } = useParams();
-  const navigate = useNavigate();
-
   const foundProject = ProjectsList.find((el) => el.ref === project);
 
   useEffect(() => {
@@ -39,7 +37,7 @@ const ProjectReader = () => {
   };
 
   if (!foundProject) {
-    return null; // Ou un fallback vide si le projet est introuvable (rare avec redirection ok)
+    return null; 
   }
 
   return (

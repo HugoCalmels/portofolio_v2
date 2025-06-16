@@ -1,26 +1,15 @@
 import "./Hero.scss";
-import { SiReact, SiNodedotjs, SiJavascript, SiCss3 } from "react-icons/si";
-import hugo from "../../../assets/images/hugoo.jpg";
-import img from "../../../../src/assets/images/backgroundThree.png";
-import img2 from "../../../../src/assets/images/7.jpg";
-import Illustration from "../../../assets/svgs/Illustration.jsx";
-
-import test from "../../../../src/assets/images/Galaxy Tab S8 Ultra5.jpg";
+import test from "../../../../src/assets/images/landing-7.png";
 import { useNavigate } from "react-router-dom";
 const Hero = (props) => {
   const navigate = useNavigate();
   const { navigateTo } = props;
 
   const handleClick = (page) => {
-    console.log(`Navigating to ${page}`);
-
-    // Navigue vers la page d'accueil ou une route spécifique
     navigate(`/`);
-
-    // Ajoute un délai court avant de faire défiler vers l'élément
     setTimeout(() => {
-      navigateTo(page); // Utilise navigateTo de App.jsx pour scroller
-    }, 50); // 50 ms est généralement suffisant, ajuste si nécessaire
+      navigateTo(page); 
+    }, 50); 
   };
   return (
     <section className="hero-wrapper">
@@ -49,7 +38,6 @@ const Hero = (props) => {
               <img src= {test}/>
    
             </div>
-            {/* Remplacer l'img par le composant SVG */}
  
           </div>
         </div>

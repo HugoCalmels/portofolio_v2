@@ -1,17 +1,4 @@
 import "./Skills.scss";
-import THPLogo from "../../../assets/images/THPLogo.png";
-import MediumStain from "../../../assets/svgs/MediumStain";
-import hugo from "../../../assets/images/hugoo.jpg";
-import { GiHumanPyramid } from "react-icons/gi";
-import { FaBabyCarriage } from "react-icons/fa";
-import { GiArtificialIntelligence } from "react-icons/gi";
-import { AiTwotoneCode } from "react-icons/ai";
-import { LiaBabyCarriageSolid } from "react-icons/lia";
-import { AiOutlineCode } from "react-icons/ai";
-import { FaGears } from "react-icons/fa6";
-import { FaLaptopCode } from "react-icons/fa6";
-import { FaCode } from "react-icons/fa6";
-import { FaHandsHelping } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
 //backend
@@ -61,7 +48,7 @@ const CompetencesBlock = ({ title, items, isVisible }) => {
         style={{ display: "flex", gap: "20px" }}
       >
         {items.map((item, index) => {
-          const delay = (items.length - 1 - index) * 150; // inverse ordre d'apparition
+          const delay = (items.length - 1 - index) * 150; 
 
           return (
             <div

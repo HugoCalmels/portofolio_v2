@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaLinkedin, FaGithub, FaGitlab } from "react-icons/fa";
-import { useEffect } from "react";
 
 const Navbar = (props) => {
   const burgerModalElem = useRef(null);
@@ -26,19 +25,12 @@ const Navbar = (props) => {
     burgerModalElem.current.classList.remove("active");
   };
 
-
-
   const handleClick = (page) => {
-    console.log(`Navigating to ${page}`);
     closeBurgerModal();
-    console.log('Current pathname:', window.location.pathname);
-    // Navigue vers la page d'accueil ou une route spécifique
     navigate(`/`);
-
-    // Ajoute un délai court avant de faire défiler vers l'élément
     setTimeout(() => {
-      navigateTo(page); // Utilise navigateTo de App.jsx pour scroller
-    }, 50); // 50 ms est généralement suffisant, ajuste si nécessaire
+      navigateTo(page); 
+    }, 50); 
   };
   return (
     <>

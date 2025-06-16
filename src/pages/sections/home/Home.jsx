@@ -1,9 +1,7 @@
 import "./Home.scss";
 import Hero from "./Hero";
-import hugo from "../../../assets/images/hugoo.jpg";
 import mam from "../../../assets/images/mam.jpg";
 import arthur from "../../../assets/images/arthur-m.jpg";
-
 import { useState } from "react";
 
 const Home = (props) => {
