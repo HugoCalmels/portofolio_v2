@@ -6,22 +6,9 @@
   min-height: 100vh;
 
   scroll-margin-top: 75px;
+  max-width: 100vw;
 
- //display:none;
-}
-
-.projects-background-container {
-  position: absolute;
-  z-index: 3;
-  transform: translateX(-50vw);
-}
-.projects-background-main {
-  width: 150vw;
-  height: 1000px;
-  background-color: $purple_default;
-  opacity: 0.3;
-  transform: rotate(-2.5deg);
-  margin-top: 30px;
+ overflow-x: hidden;
 }
 
 .projects-title {
@@ -105,7 +92,7 @@
   min-height: 225px;
   object-fit: cover;
   border-radius: 6px;
-  border:4px solid red;
+
 }
 .project-card-content {
   flex: 1;
@@ -234,6 +221,7 @@
 margin-left:auto;
 margin-right:auto;
   max-width: 1500px;
+
   @media (max-width: 800px) {
     grid-template-columns: repeat(1, 1fr);
     margin-top: 30px;
@@ -273,7 +261,7 @@ box-shadow: 0 0 2px #495aae;
   display:flex;
 
   width: 100%;
-  overflow: hidden; /* Assure que l'image ne dépasse pas la taille de la div */
+
   position: relative;
   box-shadow: 0px 0px 3px rgba(32,46,115,.66);
   border-radius: 3px;
@@ -465,3 +453,4 @@ font-size: 0.75rem;
 
 
 }
+
