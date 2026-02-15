@@ -1,6 +1,6 @@
 # Portfolio v2
 
-🌐 https://lien-si-existe
+🌐 https://idkportofolio.netlify.app/
 
 Portfolio développeur réalisé en React, utilisé pour présenter mon profil technique avant la transition vers Next.js.
 
